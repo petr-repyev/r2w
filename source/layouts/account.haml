@@ -1,0 +1,22 @@
+!!!
+%html
+  = partial :head
+  %body.nervous{:class => data.page.body_class}
+    = partial :header, :locals => { :logged_in => true }
+    .main.account
+      %a.menu-clicker.js__toggler-click.on__mobile{:href => "#", :"data-toggle" => "#accountmenu", :"data-event" => "moveHeader"} аккаунт
+      %h1.account-header Мой аккаунт
+      .inmenu.account-menu.js__tbox#accountmenu
+        .account-menu-overlay.js__supercloser
+        .account-menu-body
+          %a.inmenu-item{:href => "a-personal.html", :class => data.page.menu_personal} Персональная информация
+          %a.inmenu-item{:href => "a-orders.html", :class => data.page.menu_orders} Мои заказы
+          - if data.page.menu_wishlist == 'is__active'
+            %span.inmenu-item{:class => data.page.menu_wishlist} Wishlist
+          - else
+            %a.inmenu-item{:href => "a-wishlist.html", :class => data.page.menu_wishlist} Wishlist
+          %a.inmenu-item{:href => "a-bonuses.html", :class => data.page.menu_bonuses} Бонусы
+          %a.inmenu-item{:href => "a-subscribe.html", :class => data.page.menu_subscribe} Подписка
+      = yield
+    = partial :footer
+    = partial :hidden

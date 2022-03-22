@@ -1,0 +1,9 @@
+!!!
+%html
+  = partial :head
+  %body.nervous{:class => data.page.body_class}
+    = partial :header
+    .main{:class => data.page.page_class}
+      = yield
+    = partial :footer
+    = partial :hidden

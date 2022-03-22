@@ -1,0 +1,50 @@
+.popup {
+  position: relative;
+  background: #FFF;
+  width: 600px;
+  margin: 20px auto;
+  padding: 28px 68px;
+  z-index: 10000;
+  @include respond-to(mob) {
+    width: auto;
+    .mfp-close {
+      right: 35px;
+    }
+  }
+  h2 {
+    font-size: 18px;
+    letter-spacing: 0;
+    margin-bottom: 30px;
+    @include respond-to(mob) {
+      padding-right: 40px;
+    }
+  }
+}
+.popup-footer {
+  margin-top: 30px;
+  text-align: center;
+  .button {
+    min-width: 200px;
+  }
+}
+.mfp-close-btn-in .mfp-close {
+  @include tgs(croos_ob, 40px);
+  text-indent: -1000em;
+  margin-top: 30px;
+  margin-right: -20px;
+  opacity: 1;
+}
+.mfp-container {
+  padding: 0 !important;
+}
+
+.mfp-content {
+  min-height: 100%;
+}
+
+.popup_centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}

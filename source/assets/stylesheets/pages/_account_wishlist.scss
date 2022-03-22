@@ -1,0 +1,212 @@
+.wishlist {
+  overflow: hidden;
+  .additional {
+    margin: 0 -40px;
+    @include respond-to(mob) {
+      display: none;
+    }
+  }
+  .item.is__wished .item-fav {
+    @include tgs(cross, 14px);
+    margin-right: 3px;
+    margin-top: 3px;
+  }
+}
+.wishlist-sharing {
+  font-size: 12px;
+  font-style: italic;
+  color: #636363;
+  text-align: center;
+  margin: 0 auto 30px;
+  a {
+    color: #000;
+    &:hover {
+      opacity: .75;
+    }
+  }
+  @include respond-to(mob) {
+    padding: 15px 0 12px;
+    margin-bottom: 9px;
+  }
+}
+.wishlist-sharing-info {
+  @include respond-to(mob) {
+    display: none;
+  }
+}
+.wishlist-total {
+  text-align: center;
+  @include respond-to(mob) {
+    font-size: 16px;
+  }
+}
+
+.is__wishchange.is__wished .note_wished,
+.is__wishchange:not(.is__wished) .note_unwished {
+  transform: translateY(0);
+  z-index: 100;
+  opacity: 1;
+  transition: transform 0 linear 0, opacity .3s;
+}
+.wishlist-catalog {
+  margin: 0 -10px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #dbdbdb;
+  .item {
+    opacity: .3;
+    &.is__wished {
+      opacity: 1;
+    }
+  }
+  .button-box {
+    @include respond-to(mob) {
+      margin-top: 10px;
+      .button {
+        width: 240px;
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+  }
+  @include respond-to(tablet) {
+    width: 750px;
+    margin: 0 auto;
+    .item-additional {
+      opacity: 1;
+      position: static;
+      display: block;
+      padding: 10px 0 0;
+    }
+    .item-buttons {
+      position: absolute;
+      top: 35px;
+      right: -5px;
+      width: 27px;
+      height: 18px;
+      .button {
+        height: 100%;
+        width: 100%;
+        text-indent: -1000em;
+        border: 0;
+        background-color: transparent;
+      }
+    }
+    .item-buy {
+      .item-buy-tocart {
+        @include tgs(cart_plus, 25px);
+      }
+      .item-buy-choose {
+        @include tgs(cart_plus, 25px);
+        opacity: .25 !important;
+      }
+      .item-buy-done {
+        @include tgs(cart_plus, 25px);
+      }
+    }
+    .item-subscribe {
+      @include tgs(mail, 25px);
+    }
+    .item-size-list {
+      margin-bottom: 0;
+    }
+    .item-name {
+      margin-top: 5px;
+    }
+    .item-fav {
+      opacity: 1;
+    }
+    .js__item.is__disabled .item-buy {
+      .item-buy-tocart {
+        display: none;
+      }
+    }
+    .note-holder {
+      display: block;
+    }
+    .js__item.is__toosoon {
+      .note_choose {
+        // transition-duration: .3s;
+        z-index: 100;
+        opacity: 1;
+        transition: z-index 0 0, opacity .3s;
+      }
+    }
+    .js__item.is__bought {
+      .note_added {
+        // transition-duration: .3s;
+        z-index: 100;
+        opacity: 1;
+        transition: z-index 0 0, opacity .3s;
+      }
+    }
+  }
+  @include respond-to(mob) {
+    width: auto;
+    padding-bottom: 10px;
+    border-bottom: 0;
+    .item {
+      padding-left: 0;
+      padding-bottom: 24px;
+      min-height: 0;
+      display: block;
+      width: 100%;
+      border-bottom: 1px solid #dbdbdb;
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+    .item-additional {
+      position: static;
+      padding-top: 0;
+    }
+    .item-image {
+      float: left;
+      width: 50px;
+      padding: 0 18px;
+      line-height: 1;
+    }
+    .item-size-list {
+      display: none;
+    }
+    .item-size-select {
+      display: block;
+      font-size: 11px;
+      font-style: italic;
+      color: #636363;
+      margin: 12px 0 0;
+      .chosen-single {
+        height: 20px;
+        line-height: 20px;
+      }
+      .chosen-container {
+        margin-left: 6px;
+        font-size: 10px;
+        font-style: normal;
+      }
+    }
+    .item-info {
+      padding-right: 30px;
+    }
+    .item-name {
+      font: bold 12px $fontMain;
+      text-transform: none;
+      margin-bottom: 3px;
+    }
+    .item-desc {
+      font-size: 11px;
+      font-style: italic;
+    }
+    .item-price {
+      font: bold 11px $fontMain;
+      margin-top: 6px;
+    }
+    .item-soldout {
+      display: none;
+    }
+  }
+}

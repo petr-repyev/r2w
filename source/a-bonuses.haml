@@ -1,0 +1,84 @@
+---
+menu_bonuses: "is__active"
+---
+%h1.on__mobile Бонусы
+.box.bonuses
+  .bonuses-t.js__tabs
+    .bonuses-menu.js__tabs-switchers
+      %a.js__tabs-switcher-item.is__active{:href => "#"} Бонусы
+      %a.js__tabs-switcher-item{:href => "#"} Подарочная карта
+      %a.js__tabs-switcher-item{:href => "#"} Личный счет
+    .bonuses-box.js__tabs-container
+      .js__tabs-tab.is__active
+        .cols.currents
+          .col
+            %h2 Ваш текущий баланс:
+            .current-balance
+              2.000 бонусов
+          .col
+            %h2 Ваша скидка на R2W:
+            %span.current-discount 10%
+            %a.current-discount-helper{:href => "#"} Как увеличить <br/>скидку?
+      .js__tabs-tab
+        %form.form.form-account.balance.js__balance{:action => "#"}
+          .former.balance-precheck
+            %label.form-label Номер карты:
+            %input.input{:type => "text"}/
+            %a.button.button_alt.js__balance-check{:href => "#"} проверить баланс
+          .former.balance-checked
+            .form-label Ваш текущий баланс на карте 5768679023:
+            .current-balance 2 000 бонусов
+            %a.button.button_alt.js__balance-reset{:href => "#"} проверить другую карту
+      .js__tabs-tab
+        .cols.currents
+          .col
+            %h2 Ваш текущий баланс:
+            .current-balance
+              2.000 рублей
+          .col
+            %h2 Ваша скидка на R2W:
+            %span.current-discount 10%
+            %a.current-discount-helper{:href => "#"} Как увеличить <br/>скидку?
+  .bonuses-qa
+    .block.js__block
+      .bonuses-qa-que.js__block-clicker Что такое бонусы, где их можно получить и как использовать?
+      .bonuses-qa-ans.block-body
+        %p= lorem.paragraph
+  .transactions
+    %h2 история транзакций:
+    %table.table.table_stripped
+      %thead
+        %tr
+          %th Дата
+          %th Комментарий
+          %th Сумма, р.
+          %th Итого
+      %tbody
+        %tr
+          %td
+            %strong 8 июля 2013
+          %td Приглашенный друг совершил покупку
+          %td
+            %strong +100
+          %td 2.000 р
+        %tr
+          %td
+            %strong 27 июня 2013
+          %td Вознаграждение за репост в Facebook
+          %td
+            %strong +50
+          %td 1.900 р
+        %tr
+          %td
+            %strong 5 июня 2013
+          %td Использованы в заказе № 124365747
+          %td
+            %strong -1.000
+          %td 1.850 р
+        %tr
+          %td
+            %strong 13 мая 2013
+          %td Вознаграждение за приглашение друга на R2W
+          %td
+            %strong +2.850
+          %td 2.850 р

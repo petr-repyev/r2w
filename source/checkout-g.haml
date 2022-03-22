@@ -1,0 +1,155 @@
+%h1 Оформление заказа
+.checkout
+  .cols_3
+    .col
+      .checkout-block.pblock.js__block.is__active
+        %h2 информация о плательщике
+        %form.form.checkout-form{:action => "#"}
+          .form-row
+            = partial :form_input, :locals => {:title => "Ваше имя:", :name => "acc_name", :value => "Владимир"}
+          .form-row
+            = partial :form_input, :locals => {:title => "Фамилия:", :name => "acc_sname", :value => "Иванов"}
+          .form-row
+            = partial :form_input, :locals => {:title => "Телефон:", :name => "acc_phone", :value => "+7 (917) 87 66 87"}
+        %a.checkout-switcher.outlink.js__block-clicker{:href => "#"} изменить
+
+      .checkout-block.pblock.js__block.is__active
+        %h2 адрес доставки
+        %form.form.checkout-form.js__prechoice{:action => "#"}
+          .form-row
+            .prechoice
+              %span предвыбор:
+              %a.js__prechoice-filler{:href => "#", :"data-prechoice-city" => "Москва", :"data-prechoice-region" => 0, :"data-prechoice-country" => 0} москва
+              %a.js__prechoice-filler{:href => "#", :"data-prechoice-city" => "Санкт-Петербург", :"data-prechoice-region" => 1, :"data-prechoice-country" => 0} санкт-петербург
+            = partial :form_select, :locals => {:name => "acc_pre", :data => ["Москва, ул. Ивана Голубца, кв. 87", "Москва, ул. Ивана Голубца, кв. 88"], :width => "100%", :placeholder => "Введённый ранее или новый адрес"}
+          .form-row
+            = partial :form_select, :locals => {:title => "Cтрана:", :name => "acc_country", :data => ["Россия", "Нероссия"], :width => "100%", :prechoice => "country"}
+          .form-row
+            = partial :form_select, :locals => {:title => "Регион:", :name => "acc_region", :data => ["Москва", "Санкт-Петербург", "Ростовская область", "Тверская область"], :prechoice => "region"}
+          .form-row
+            = partial :form_input, :locals => {:title => "Город (населенный пункт):", :name => "acc_city", :prechoice => "city"}
+          .form-row
+            = partial :form_input, :locals => {:title => "Адрес:", :name => "acc_address"}
+        %a.checkout-switcher.outlink.js__block-clicker{:href => "#"} изменить
+
+    .col
+      .checkout-block.pblock.js__block
+        %h2 способ доставки
+        .checkout-plain
+          .checkout-floater +300 р.
+          %p Курьером, Москва, за МКАД до 10 км (дальше Почтой России)
+        %form.form.checkout-form{:action => "#"}
+          .radio-list
+            %label.radio-item
+              .checkout-floater +300 р.
+              %input{:type => "radio", :name => "delivery"}/
+              %span
+                Курьером, Москва, за МКАД до 10 км (дальше Почтой России)
+            %label.radio-item
+              .checkout-floater 0 р.
+              %input{:type => "radio", :name => "delivery"}/
+              %span
+                Самовывоз со склада в Таганроге
+            %label.radio-item
+              .checkout-floater +900 р.
+              %input{:type => "radio", :name => "delivery"}/
+              %span
+                %img{:src => "#{images_dir}/data/d1.png", :alt => ""}/
+                PonyExpress
+            %label.radio-item
+              .checkout-floater +500 р.
+              %input{:type => "radio", :name => "delivery"}/
+              %span
+                %img{:src => "#{images_dir}/data/d2.png", :alt => ""}/
+                СПСР
+        %a.checkout-switcher.outlink.js__block-clicker{:href => "#"} изменить
+
+      .checkout-block.pblock
+        %h2 оплата
+        .radio-list
+          %label.radio-item
+            %input{:type => "radio", :name => "delivery"}/
+            %span
+              %img{:src => "#{images_dir}/data/p1.png", :alt => ""}/
+              Банковская карта
+          %label.radio-item
+            %input{:type => "radio", :name => "delivery"}/
+            %span
+              Наличными курьеру или в точке самовывоза
+          %label.radio-item
+            %input{:type => "radio", :name => "delivery"}/
+            %span
+              Банковской картой курьеру или в точке самовывоза
+          %label.radio-item
+            %input{:type => "radio", :name => "delivery"}/
+            %span
+              %img{:src => "#{images_dir}/data/p2.png", :alt => ""}/
+              Web.Money
+          %label.radio-item
+            %input{:type => "radio", :name => "delivery"}/
+            %span
+              %img{:src => "#{images_dir}/data/p3.png", :alt => ""}/
+              Яндекс.Деньги
+          %label.radio-item
+            %input{:type => "radio", :name => "delivery"}/
+            %span
+              %img{:src => "#{images_dir}/data/p4.png", :alt => ""}/
+              Qiwi
+
+    .col
+      .checkout-block
+        .pblock
+          %table.table.checkout-table
+            %colgroup
+            %thead
+              %tr
+                %th
+                  %h2 2 покупки
+                %th Цена
+                %th Итого
+            %tbody
+              %tr.order-item
+                %td
+                  %h2
+                    %a{:href => "item.html"} Alexis Mabille
+                  %p.order-desc Рубашка синего цвета
+                  %p.order-size FR 38
+                %td
+                  21 500 p.
+                %td
+                  %strong 21 500 p.
+              %tr.order-item
+                %td
+                  %h2
+                    %a{:href => "item.html"} Donna Karan
+                  %p.order-desc Узкие укороченные брюки
+                  %p.order-size FR 38
+                %td
+                  19 000 p.
+                %td
+                  %strong 19 000 p.
+        .tcols.pblock
+          .tcol.order-summary
+            %p
+              %span.order-summary-label Стоимость:
+              40 500 р.
+            %p
+              %span.order-summary-label Доставка:
+              300 р.
+            %p
+              %span.order-summary-label Скидка:
+              10 000 р.
+            %p
+              %span.order-summary-label Бонусы:
+              500 р.
+            %p
+              %span.order-summary-label Купон:
+              100 р.
+            %p.order-summary-total
+              %span.order-summary-label Итого:
+              30 400 р.
+          .tcol
+            %label.order-terms
+              %input{:type => "checkbox"}/
+              Подтверждаю согласе с <a href="#">Условиями Продажи</a>.
+            %a.button.order-checkout{:href => "#"} Подтвердить заказ

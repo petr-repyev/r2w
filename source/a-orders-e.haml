@@ -1,0 +1,12 @@
+---
+menu_orders: "is__active"
+---
+%h1.on__mobile мои заказы
+.box.olist
+  .pblock
+    .empty-message
+      %p Вы еще не сделали ни одного заказа.
+      %p.empty-additional Вы можете сделать заказ и отслеживать его статус в этом списке.
+      %p.empty-additional Возможно, вам понравится что-нибудь из наших последних поступлений:
+  .additional
+    = partial :"blocks/slider"

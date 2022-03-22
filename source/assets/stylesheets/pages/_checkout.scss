@@ -1,0 +1,261 @@
+.checkout {
+  font-size: 12px;
+  line-height: 16px;
+  padding: 0 40px;
+  max-width: 1000px;
+  margin: auto;
+  .outlink {
+    font-weight: bold;
+  }
+  .holder {
+    max-width: 1035px;
+  }
+  h2 {
+    font: 18px $fontAlt;
+    text-transform: uppercase;
+    letter-spacing: .025em;
+  }
+  @include respond-to(tablet) {
+    padding-left: $mw;
+    padding-right: $mw;
+    .col {
+      width: 45%;
+    }
+    .col:nth-child(3) {
+      width: 100%;
+      position: relative;
+      padding-top: 20px;
+      &:before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        top: 0;
+        left: -40px;
+        right: -40px;
+        background: #dbdbdb;
+      }
+    }
+    .tcols {
+      text-align: justify;
+      &:after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+      }
+      .tcol {
+        display: inline-block;
+        vertical-align: top;
+        width: 45%;
+        float: none;
+      }
+    }
+    .order-terms {
+      margin-top: 0;
+    }
+  }
+  @include respond-to(mob) {
+    padding: 10px 0 0;
+    border-top: 1px solid #dbdbdb;
+    .pblock:last-child {
+      margin-bottom: 0;
+    }
+    .col {
+      display: block;
+      width: 100%;
+      border-bottom: 1px solid #dbdbdb;
+      margin-bottom: 20px;
+      &:nth-child(3):before {
+        content: normal;
+      }
+    }
+    .tcols {
+      margin-top: 30px;
+      .tcol {
+        display: block;
+        width: 100%;
+      }
+    }
+    .table {
+      border-bottom: 0;
+    }
+    .table tr:last-child td {
+      border-bottom: 0;
+    }
+  }
+}
+.checkout-block {
+  margin-bottom: 30px;
+  @include respond-to(mob) {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  .order-summary {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 25px;
+    color: #636363;
+    line-height: 20px;
+    @include respond-to(mob) {
+      border-top: 0;
+      padding-top: 0;
+
+    }
+  }
+  .order-summary-label {
+    float: left;
+    text-align: left;
+  }
+}
+.checkout-plain {
+  margin-bottom: 1em;
+  display: block;
+  .checkout-block.is__active & {
+    display: none;
+  }
+}
+.checkout-form {
+  display: none;
+  margin-top: 20px;
+  .checkout-block.is__active & {
+    display: block;
+  }
+  .radio-item {
+    padding-right: 60px;
+  }
+  .checkout-floater {
+    position: absolute;
+    line-height: 1;
+    top: 15px;
+    right: 7px;
+    color: #000;
+  }
+}
+.checkout-switcher {
+  .checkout-block.is__active & {
+    display: none;
+  }
+}
+.checkout-floater {
+  font-weight: bold;
+  float: right;
+  margin-left: 40px;
+}
+
+.radio-item {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  line-height: 57px;
+  padding: 0 40px;
+  color: #636363;
+  &:nth-child(odd) {
+    background: #f0f0f0;
+  }
+  input {
+    position: absolute;
+    top: 22px;
+    left: 10px;
+  }
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 16px;
+  }
+  img {
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-right: .5em;
+  }
+}
+.checkout-table {
+  margin-bottom: 15px;
+  td, th {
+    padding: 0;
+  }
+  thead {
+    border-bottom: 0;
+    @include respond-to(mob) {
+      th {
+        padding-top: 0;
+        display: none;
+        &:first-child {
+          display: block;
+          h2 {
+            margin-top: 0;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  .order-item {
+    @include respond-to(mob) {
+      padding: 0;
+      position: relative;
+      .co-order-sum {
+        display: none;
+      }
+      .co-order-price {
+        font-weight: bold;
+        position: absolute;
+        top: 33px;
+        right: 0;
+        padding: 0;
+      }
+    }
+    td {
+      padding: 15px 0;
+      vertical-align: top;
+      border-bottom: 1px solid #dbdbdb;
+      @include respond-to(mob) {
+        border-bottom: 0;
+        &:first-child {
+          padding-right: 100px;
+        }
+      }
+    }
+    h2 {
+      margin: 0 0 3px;
+      font: bold 13px $fontMain;
+      text-transform: none;
+    }
+    .order-size {
+      margin: 3px 0 0;
+      font-size: 11px;
+      color: #909090;
+      @include respond-to(mob) {
+        position: absolute;
+        top: 15px;
+        right: 0;
+        margin-top: 0;
+        color: #000;
+        span {
+          font-style: italic;
+          color: #636363;
+        }
+      }
+    }
+  }
+}
+
+.order-terms {
+  margin-top: 25px;
+  display: block;
+  text-align: left;
+  font-style: italic;
+  color: #636363;
+  padding-left: 18px;
+  position: relative;
+  clear: both;
+  input {
+    position: absolute;
+    left: 0;
+  }
+  a {
+    font-weight: bold;
+    color: #000;
+    &:hover {
+      opacity: .65;
+    }
+  }
+}

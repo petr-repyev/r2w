@@ -1,0 +1,46 @@
+.media {
+  @include respond-to(tablet) {
+    width: 740px;
+    margin: auto;
+  }
+  @include respond-to(mob) {
+    width: auto;
+  }
+}
+.media-header {
+  text-align: center !important;
+  margin-left: 0;
+  margin-right: 0;
+}
+.media-block {
+  text-align: center;
+  width: 300px;
+  margin-bottom: 30px;
+  @include respond-to(mob) {
+    display: block;
+    width: auto;
+    position: static !important;
+  }
+}
+.media-source {
+  margin-bottom: 20px;
+}
+.media-list {
+  font-size: 11px;
+  color: #636363;
+  margin-bottom: 30px;
+}
+.media-item {
+  margin-bottom: 28px;
+  a {
+    display: inline-block;
+  }
+}
+.media-item-title {
+  display: block;
+  margin: .8em 0;
+  font: bold italic 15px $fontMain;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #636363;
+}

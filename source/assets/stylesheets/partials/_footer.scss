@@ -1,0 +1,376 @@
+.footer {
+  margin-top: 10px;
+  background: #fff;
+  font-size: 11px;
+  &.hidden {
+    display: none;
+  }
+  a:hover {
+    opacity: .6;
+  }
+}
+.footer_static {
+  padding-top: 20px;
+  h2 span {
+    letter-spacing: 0;
+    margin-right: -.2em;
+  }
+  @include respond-to(tablet) {
+    position: relative;
+    top: 78px;
+    margin-top: 0;
+  }
+  @include respond-to(mob) {
+    top: 156px;
+    h2 {
+      text-transform: none;
+    }
+  }
+  .holder {
+    width: 770px;
+
+    &:after {
+      content: '';
+      clear: both;
+      display: block;
+    }
+    @include respond-to(tablet) {
+      width: auto;
+    }
+    @include respond-to(mob) {
+      width: auto;
+    }
+  }
+}
+.fmenu {
+  overflow: hidden;
+}
+.fmenu-block {
+  width: 20%;
+  float: left;
+  vertical-align: top;
+  text-align: justify;
+  box-sizing: border-box;
+  padding-right: 20px;
+  @include respond-to(tablet) {
+    width: 25%;
+    text-align: left;
+    &:first-child {
+      margin: -4px 0 6px;
+      width: 100%;
+    }
+  }
+  @include respond-to(mob) {
+    display: block;
+    float: none;
+    width: auto;
+  }
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+  h2 {
+    @include respond-to(tablet) {
+      display: inline-block;
+      margin-right: 10px;
+      &:after {
+        content: ':';
+      }
+    }
+  }
+  li {
+    // margin-bottom: 9px;
+  }
+  a {
+    display: inline-block;
+    padding-bottom: 9px;
+    color: #666;
+  }
+  .social {
+    @include respond-to(tablet) {
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: -3px;
+    }
+    li {
+      position: relative;
+      padding-left: 20px;
+      @include respond-to(tablet) {
+        display: inline-block;
+        width: 0;
+        overflow: hidden;
+        height: 14px;
+        margin-bottom: 0;
+        margin-right: 10px;
+      }
+    }
+    .social-item {
+      position: absolute;
+      left: 0;
+      top: -1px;
+      @include respond-to(tablet) {
+        top: 0;
+      }
+    }
+  }
+  .phone {
+    margin-top: 4px;
+  }
+}
+.flogos {
+  overflow: hidden;
+  @include respond-to(tablet) {
+    margin-top: 6px;
+  }
+  @include respond-to(mob) {
+    padding-bottom: 12px;
+  }
+}
+.flogos-block {
+  float: left;
+  text-align: justify;
+  box-sizing: border-box;
+  line-height: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  a {
+    opacity: .4;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+  @include respond-to(tablet) {
+    margin-bottom: 10px;
+  }
+  @include respond-to(mob) {
+    width: 100% !important;
+    padding-right: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    height: 40px;
+  }
+}
+.flogos-block_pay {
+  width: 60%;
+  padding-right: 10%;
+  @include respond-to(tablet) {
+    padding-right: 5%;
+    width: 50%;
+  }
+}
+.flogos-block_par {
+  float: right;
+  width: 40%;
+  @include respond-to(tablet) {
+    width: 50%;
+    padding-right: 40px;
+  }
+  @include respond-to(mob) {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+.fcopy {
+  display: inline-block;
+  position: relative;
+  top: -35px;
+  z-index: 0;
+  color: #999;
+  @include respond-to(mob) {
+    top: 0;
+    margin-bottom: 10px;
+  }
+}
+.flogos-block {
+  display: inline-block;
+  img {
+    vertical-align: middle;
+  }
+}
+
+
+
+
+.footer_fixed {
+  // display: none;
+  position: fixed;
+  z-index: 1001;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 55px;
+  line-height: 55px;
+  transform: translateX(-1000em);
+  opacity: 0;
+  transition: opacity .3s, transform .2s linear .3s;
+  @include respond-to(tablet) {
+    // opacity: 1;
+    // transform: translateX(0);
+  }
+  @include respond-to(mob) {
+    background: transparent;
+    width: auto;
+    height: 36px;
+    line-height: 36px;
+  }
+  &.is__active {
+    transform: translateX(0);
+    transition: opacity .3s, transform 0;
+    opacity: 1;
+  }
+  .menu {
+    text-align: center;
+    font-size: 14px;
+  }
+}
+.footer-desk {
+  @include respond-to(mob) {
+    display: none;
+  }
+}
+.footer-mobile {
+  display: none;
+  margin-top: -5px;
+  @include respond-to(mob) {
+    display: block;
+  }
+  a {
+    line-height: 40px;
+    padding: 0 5px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+.footer-mobile-like {
+  margin-left: -5px;
+  &:after {
+    @include tgs(f_heart, 33px);
+    vertical-align: middle;
+    content: '';
+    display: inline-block;
+  }
+}
+.footer-mobile-info {
+  &:after {
+    @include tgs(f_info, 33px);
+    vertical-align: middle;
+    content: '';
+    display: inline-block;
+  }
+}
+.footer-social {
+  float: left;
+}
+.footer-magazine {
+  position: relative;
+  display: block;
+  float: right;
+  padding-left: 20px;
+  font: 14px/55px $fontAlt;
+  text-transform: uppercase;
+  @include animation();;
+  &:before {
+    content: '';
+    @include tgs(pointer_ub, 10px);
+    position: absolute;
+    top: 22px;
+    left: 0;
+    transition: transform .3s;
+  }
+  &.is__active {
+    opacity: .6;
+    &:before {
+      transform: rotate(180deg);
+    }
+  }
+}
+.footer-magazine-in {
+  position: relative
+}
+
+.social-item {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  text-indent: -1000em;
+  vertical-align: middle;
+  margin-right: 20px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.social-item_fb { background: image-url('icons/s_fb.png'); }
+.social-item_vk { background: image-url('icons/s_vk.png'); }
+.social-item_tw { background: image-url('icons/s_tw.png'); }
+.social-item_ig { background: image-url('icons/s_ig.png'); }
+
+.fsubscribe {
+  background: #F5F3F1;
+  line-height: 48px;
+  padding: 20px 0 10px;
+  @include respond-to(tablet) {
+    position: absolute;
+    top: -78px;
+    width: 100%;
+    padding-bottom: 17px;
+  }
+  @include respond-to(mob) {
+    top: -156px;
+  }
+}
+.fsubscribe-form {
+  // display: inline-block;
+  padding-right: 165px;
+  padding-left: 135px;
+  @include respond-to(mob) {
+    padding: 0;
+  }
+  .button {
+    margin-right: -165px;
+    width: 145px;
+    float: right;
+    @include respond-to(mob) {
+      margin-right: 0;
+      float: none;
+      width: 100%;
+    }
+  }
+  .input {
+    display: inline-block;
+    margin-bottom: 0;
+    width: 99%;
+    padding: 0 12px 7px;
+    @include respond-to(mob) {
+      width: 100%;
+    }
+  }
+}
+.fsubscribe-text {
+  float: left;
+  font: 14px/48px $fontAlt;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  margin-right: 20px;
+  @include respond-to(mob) {
+    display: block;
+    line-height: 30px;
+  }
+}
+
+.footer-desk {
+  @include respond-to(mob) {
+    display: none;
+  }
+}
+.footer-mobile {
+  display: none;
+  @include respond-to(mob) {
+    display: block;
+  }
+}

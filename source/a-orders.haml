@@ -1,0 +1,19 @@
+---
+menu_orders: "is__active"
+---
+%h1.on__mobile мои заказы
+.box.olist.js__olist
+  %table.olist-table.js__table
+    %tbody.js__olist-body
+      = partial :"blocks/oline"
+      = partial :"blocks/oline"
+      = partial :"blocks/oline", :locals => {:is__cancelled => true}
+      = partial :"blocks/oline"
+      = partial :"blocks/oline"
+      = partial :"blocks/oline"
+      = partial :"blocks/oline"
+      = partial :"blocks/oline"
+      = partial :"blocks/oline"
+      = partial :"blocks/oline"
+  .olist-loader
+    %a.js__olist-loader.button.button_alt{:href => "#olist"} показать еще 10

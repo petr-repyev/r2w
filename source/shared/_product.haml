@@ -1,0 +1,68 @@
+- id ||= 1
+- name ||= lorem.name
+- desc ||= lorem.sentence
+- price ||= '10 000 р.'
+- is_sold ||= false
+- is_avail ||= false
+- is_reserved ||= false
+- is_wishlist ||= false
+- is_nologged ||= false
+- label ||= false
+- price ||= false
+- price_old ||= false
+- item_class = ""
+- if is_wishlist
+  - item_class += "is__wished"
+.item.js__item.is__disabled{:class => item_class}
+  - if label
+    - case label
+      - when "act"
+        .item-label.item-label_act
+          %span.item-label-in Акция
+      - when "new"
+        .item-label.item-label_new
+          %span.item-label-in Новинка
+      - else
+        .item-label.item-label_discount
+          %span.item-label-in= label
+  .item-top
+    - if is_nologged
+      %a.item-fav.js__popup-link{:href => "#wishno"}
+    - else
+      %a.item-fav.js__item-fav{:href => "#"}
+    %a.item-image{:href => "item.html"}
+      %img{:src => "#{images_dir}/data/i#{id}.jpg", :alt => ""}/
+    .item-additional
+      .item-size-list
+        %span.item-size-list-label Размер:
+        %span.item-size-list-in.js__item-sizes
+          %span.item-size.js__item-size XS
+          %span.item-size.js__item-size.is__disabled S
+          %span.item-size.js__item-size M
+          %span.item-size.js__item-size.is__disabled L
+      .item-buttons.js__item-buttons
+        .item-buy.js__item-buy
+          %a.button.item-buy-tocart.js__item-tocart{:href => "#"} В корзину
+          %span.button.button_alt.item-buy-choose.js__item-choose Выберите размер
+          %span.button.button_alt.item-buy-done Товар добавлен
+        %a.button.button_alt.item-subscribe.js__popup-link{:href => "#item_subscribe"} Подписаться
+  .item-info
+    .item-name
+      %a{:href => "item.html"}= name
+    %p.item-desc= desc
+    - if is_wishlist
+      .item-size-select
+        Размер:
+        = partial :form_select, :locals => {:name => "itemsize", :data => ["", "XS", "S", "M", "L"], :width => "77px", :aclass => "js__item-size_select"}
+    .item-price
+      - if price_old
+        %span.item-price-new= price
+        %span.item-price-old= price_old
+      - else
+        = price
+      - if is_sold
+        %span.item-lbl.item-lbl_soldout Продано
+      - if is_avail
+        %span.item-lbl.item-lbl_avail В наличии
+      - if is_reserved
+        %span.item-lbl.item-lbl_reserved В резерве

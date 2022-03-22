@@ -1,0 +1,77 @@
+
+.side.sidebox.js__tbox#sidemenu
+  = partial :"sides/magazine"
+  .another
+    %h2 Другие статьи:
+    %a.another-article{:href => "#"}
+      %img{:src => "#{images_dir}/data/aa1.jpg", :alt => ""}/
+      Couture Beauty: Autumn ‘13
+    %a.another-article{:href => "#"}
+      %img{:src => "#{images_dir}/data/aa2.jpg", :alt => ""}/
+      The Vogue August Issue Launches
+    %a.another-article{:href => "#"}
+      %img{:src => "#{images_dir}/data/aa3.jpg", :alt => ""}/
+      Le Lancôme show by Alber Elbaz
+
+.cntnt
+  .cntnt-holder
+    %article.article
+      %header.article-header
+        %h1 100 years of Fashion Illustration
+        .article-social
+          = partial :social
+        .article-meta
+          %a{:href => "#"} Story
+          — 8 июля
+      .article-body
+        .article-lead
+          %p KATE MOSS is the subject of a forthcoming Christie'sauction selling a selection of works featuring her. Curated by art collector Gert Elfering, the sale will feature a mixture of photographs, paintings, sculptures.
+
+        %p "I am pleased to be working with Christie's once again, on this occasion to celebrate the living icon Kate Moss," said Elfering. "She is the subject and inspiration for this collection, but the importance of the present works is in her collaboration with the internationally renowned artists who created them. As I saw the collection taking shape, I was delighted by the variety and the consistent power of the works, and I have already enjoyed seeing the positive reaction in the faces of others when they first see them. Kate is the ultimate modern muse and we will be seeing her images in major museums and private collections for years to come. She has altered perceptions for women across the globe, encouraging them towards greater individuality and expressive freedom. There is so much you can learn from Kate - how you should always remain true to yourself, develop your own style, and emphasise your individuality."
+        .sider.sider_r
+          .sider-media
+            %img{:src => "#{images_dir}/data/yt.jpg", :alt => ""}/
+          .sider-text
+            Fashion Week isn't only about dramatic gowns — it's also an opportunity.
+        %h2 Sit Back, Relax and Watch Dior
+        %p "I am pleased to be working with Christie's once again, on this occasion to celebrate the living icon Kate Moss," said Elfering. "She is the subject and inspiration for this collection, but the importance of the present works is in her collaboration with the internationally renowned artists who created them. As I saw the collection taking shape, I was delighted by the variety and the consistent power of the works, and I have already enjoyed seeing the positive reaction in the faces of others when they first see them. She has altered perceptions for women across the globe, encouraging them towards greater individuality and expressive freedom. There is so much you can learn from Kate - how you should always remain true to yourself.
+        .sider.sider_l
+          .sider-media
+            .js__slider
+              .js__slider-limiter
+                .js__slider-nav.js__slider-nav_prev.is__disabled
+                .js__slider-nav.js__slider-nav_next
+                .js__slider-clip
+                  .js__slider-list
+                    .js__slider-item
+                      %img{:src => "#{images_dir}/data/ar.jpg", :alt => ""}/
+                    .js__slider-item
+                      %img{:src => "#{images_dir}/data/ar2.jpg", :alt => ""}/
+                    .js__slider-item
+                      %img{:src => "#{images_dir}/data/ar3.jpg", :alt => ""}/
+          .sider-text
+            Each photo book is also unique because it is personalized with your own Fashion illustrations.
+        %p As I saw the collection taking shape, I was delighted by the variety and the consistent power of the works, and I have already enjoyed seeing the positive reaction in the faces of others when they first see them. She has altered perceptions for women across the globe, encouraging them towards greater individuality and expressive freedom. There is so much you can learn from Kate - how you should always remain true to yourself.
+      %footer.article-footer
+        .article-social
+          = partial :social
+        .article-nav
+          .article-nav-item.article-nav-item_prev
+            %a.article-nav-image{:href => "#"}
+              %img{:src => "#{images_dir}/data/ai1.jpg", :alt => ""}/
+            %p Предыдущая статья:
+            %h2
+              %a{:href => "article.html"} Prada Needs You: The Search Is On
+
+          .article-nav-item.article-nav-item_next
+            %a.article-nav-image{:href => "#"}
+              %img{:src => "#{images_dir}/data/ai2.jpg", :alt => ""}/
+            %p Слудующая статья:
+            %h2
+              %a{:href => "article.html"} M&S Vs The Victoria's Secret Knicker Queen
+    .abn
+      %a{:href => "#"}
+        %img{:src => "#{images_dir}/data/br.jpg", :alt => ""}/
+    .additional
+      %h2.additional-header Вам также может понравиться
+      = partial :"blocks/slider"

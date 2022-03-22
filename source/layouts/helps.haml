@@ -1,0 +1,31 @@
+!!!
+%html
+  = partial :head
+  %body.help.nervous{:class => data.page.body_class}
+    = partial :header
+    .main.clear
+      %a.side-title.js__toggler-click{:href => "#", :"data-toggle" => "#sidemenu", :"data-event" => "moveHeader"}  разделы
+      .side.sidebox.js__tbox#sidemenu
+        .sidebox-close.on_mobile.js__closer
+        .sidebox-body.scroll
+          %h2.side-az.on__desk
+            %a{:href => "designers.html"} Дизайнеры A-Z
+          %h2.on__desk.on__mobile
+            %a{:href => "h-help.html"} Помощь
+          %ul
+            %li
+              %a.is__active{:href => "h-delivery.html"} Доставка
+            %li
+              %a{:href => "h-payment.html"} Оплата
+            %li
+              %a{:href => "h-return.html"} Обмен и возврат
+            %li
+              %a{:href => "h-qa.html"} Вопрос-ответ
+            %li
+              %a{:href => "#"} Задать вопрос
+      .cntnt
+        .cntnt-holder
+          = yield
+
+    = partial :footer
+    = partial :hidden

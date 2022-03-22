@@ -1,0 +1,50 @@
+
+%a.side-title.js__toggler-click{:href => "#", :"data-toggle" => "#sidemenu", :"data-event" => "moveHeader"} Рубрики
+.side.sidebox.js__tbox#sidemenu= partial :"sides/magazine", :locals => {:page => "journal"}
+.cntnt
+  .cntnt-holder
+    %h1 Журнал
+    %a.article-item.article-item_featured{:href => "j-article.html"}
+      %span.article-title
+        %span Prada Label Needs You: <br/> The Search Is On
+      %span.article-image
+        %img{:src => "#{images_dir}/data/ab.jpg", :alt => ""}/
+      %span.article-meta
+        %span Story — 10 июля
+
+    .article-list
+      %a.article-item{:href => "j-article.html"}
+        %span.article-title
+          100 years of Fashion Illustration<span class="article-new">new!</span>
+        %span.article-meta
+          Story — 8 июля
+        %span.article-image
+          %img{:src => "#{images_dir}/data/a1.jpg", :alt => ""}/
+        %span.article-desc Each photo book is also unique because it is personalized with your own Fashion illustrations.
+
+      %a.article-item{:href => "j-article.html"}
+        %span.article-title Le Lancôme show by Alber Elbaz
+        %span.article-meta
+          Ideas
+          — 5 июля
+        %span.article-image
+          %img{:src => "#{images_dir}/data/a2.jpg", :alt => ""}/
+        %span.article-desc Fashion Week isn't only about dramatic gowns - it's also an opportunity for the world's best hair and make-up artists to flex their creative muscles in an environment where drama, opulence and extravagance are welcomed with open arms.
+
+      %a.article-item{:href => "j-article.html"}
+        %span.article-title The Vogue August Issue Launches
+        %span.article-meta
+          Fashion weeks
+          — 2 июня
+        %span.article-image
+          %img{:src => "#{images_dir}/data/a3.jpg", :alt => ""}/
+        %span.article-desc Fashion Week isn't only about dramatic gowns - it's also an opportunity for the world's best hair and make-up artists to flex their creative muscles in an environment where drama, opulence and extravagance are welcomed with open arms.
+
+      %a.article-item{:href => "j-article.html"}
+        %span.article-title Couture Beauty: Autumn ‘13
+        %span.article-meta
+          Trends
+          — 4 июня
+        %span.article-image
+          %img{:src => "#{images_dir}/data/a4.jpg", :alt => ""}/
+        %span.article-desc Carla Bruni—model, musician and former French First Lady—talks about her new album, motherhood and life outside Élysée Palace

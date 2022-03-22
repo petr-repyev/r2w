@@ -1,0 +1,54 @@
+#sizechart.popup.sizechart.mfp-hide
+  .js__tabs
+    .sizechart-block.sizechart-header
+      %h2
+        таблица размеров
+        %span.js__tabs-switchers.sizechart-geneders
+          %a.js__tabs-switcher-item.sizechart-geneder.is__active{:href => "#"} женские
+          %a.js__tabs-switcher-item.sizechart-geneder{:href => "#"} мужские
+    .js__tabs-container
+      .js__tabs-tab.is__active.js__tabs
+        .js__tabs-switchers.sizechart-types.sizechart-block
+          %a.js__tabs-switcher-item.sizechart-type.is__active{:href => "#"} Одежда
+          %a.js__tabs-switcher-item.sizechart-type{:href => "#"} Обувь
+          %a.js__tabs-switcher-item.sizechart-type{:href => "#"} Джинсы
+          %a.js__tabs-switcher-item.sizechart-type{:href => "#"} Кольца
+          %a.js__tabs-switcher-item.sizechart-type{:href => "#"} Украшения
+        .js__tabs-container
+          .js__tabs-tab.is__active
+            = partial "blocks/sizechart_table", :locals => {:title => "М Одежда"}
+          .js__tabs-tab
+            = partial "blocks/sizechart_table", :locals => {:title => "М Обувь"}
+          .js__tabs-tab
+            = partial "blocks/sizechart_table", :locals => {:title => "М Джинсы"}
+          .js__tabs-tab
+            = partial "blocks/sizechart_table", :locals => {:title => "М Кольца"}
+          .js__tabs-tab
+            = partial "blocks/sizechart_table", :locals => {:title => "М Украшения"}
+      .js__tabs-tab.js__tabs
+        .js__tabs-switchers.sizechart-types.sizechart-block
+          %a.js__tabs-switcher-item.sizechart-type.is__active{:href => "#"} Одежда2
+          %a.js__tabs-switcher-item.sizechart-type{:href => "#"} Обувь
+          %a.js__tabs-switcher-item.sizechart-type{:href => "#"} Джинсы
+          %a.js__tabs-switcher-item.sizechart-type{:href => "#"} Кольца
+          %a.js__tabs-switcher-item.sizechart-type{:href => "#"} Украшения
+        .js__tabs-container
+          .js__tabs-tab.is__active
+            = partial "blocks/sizechart_table", :locals => {:title => "Ж Одежда"}
+          .js__tabs-tab
+            = partial "blocks/sizechart_table", :locals => {:title => "Ж Обувь"}
+          .js__tabs-tab
+            = partial "blocks/sizechart_table", :locals => {:title => "Ж Джинсы"}
+          .js__tabs-tab
+            = partial "blocks/sizechart_table", :locals => {:title => "Ж Кольца"}
+          .js__tabs-tab
+            = partial "blocks/sizechart_table", :locals => {:title => "Ж Украшения"}
+    .sizechart-block.block.pblock.js__block
+      %h2.block-header
+        %a.js__block-clicker{:href => "#"} подсказки по выбору размера
+      .sizechart-block-body.block-body
+        %p Для того, чтобы выбрать правильный размер верхней одежды, необходимо знать основные параметры своей фигуры. Для этого нужно сделать измерения груди, талии и бедер. Эти значения будут вам нужны всегда при выборе верхней одежды и любой другой одежды. Для того, чтобы правильно измерить себя, вам понадобится сантиметровая лента. Встаньте возле зеркала и следуйте рекомендациям.
+        .sizechart-helper
+          %p <strong>Для груди:</strong> оберните ленту вокруг себя так, чтобы она проходила через лопатки и самую выступающую часть груди; для талии: лента должна проходить по самой узкой части торса;
+          %p <strong>Для талии:</strong> лента должна проходить по самой узкой части торса;
+          %p <strong>Для бедер:</strong> лента должна проходить по самым выступающим частям ягодиц. Если верхняя одежда имеет четкие плечи, то обязательно измерьте ширину плеча: от точки соединения плеча и шеи до самой крайней точки плеча.

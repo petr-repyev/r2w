@@ -1,0 +1,39 @@
+- logged_in ||= false
+- if data.page.alert
+  .alert#js__alert
+    = data.page.alert
+    .alert-close#js__alert-close
+%header.header.nervous
+  .holder
+    - if (data.page.body_class == "index")
+      .logo.js__toggler-hover{:"data-toggle" => "#logomenu"}
+        %span.logo-in
+    - else
+      %a.logo.js__toggler-hover{:href => "/", :"data-toggle" => "#logomenu"}
+        %span.logo-in
+    %a.logo.logo_m.js__toggler-click{:href => "/", :"data-toggle" => "#mlogomenu", :"data-event" => "moveHeader"}
+      %span.logo-in
+    .header-side
+      %a.mobile.header-menu-link.js__toggler-click{:href => "#", :"data-toggle" => "#mmenu", :"data-event" => "moveHeader"}
+      %a.supercloser.js__supercloser{:href => "#"}
+      .header-user
+        - if logged_in
+          %a.js__toggler-click{:href => "#", :"data-toggle" => "#user"} Анна Смирнова
+        - else
+          %a.js__toggler-click{:href => "#", :"data-toggle" => "#login"} Войти
+          %a.js__toggler-click{:href => "#", :"data-toggle" => "#register"} Регистрация
+      %a.header-search.js__toggler-click{:href => "#", :"data-toggle" => "#search"}
+      %a.header-cart.js__toggler-click{:href => "cart.html", :"data-toggle" => "#cart"}
+        %span.header-cart-counter 13
+      %a.header-cart.header-cart_mobile{:href => "cart.html"}
+        %span.header-cart-counter 13
+    .menu.js__menu
+      %a.menu-item.js__toggler-hover{:href => "catalog.html", :"data-toggle" => "#menu1", :"data-scrollto" => "#screen_1"} новинки
+      %a.menu-item.js__toggler-hover{:href => "catalog.html", :"data-toggle" => "#menu2", :"data-scrollto" => "#screen_2"} одежда
+      %a.menu-item.js__toggler-hover{:href => "catalog.html", :"data-toggle" => "#menu3", :"data-scrollto" => "#screen_3"} Обувь
+      %a.menu-item.js__toggler-hover{:href => "catalog.html", :"data-toggle" => "#menu4", :"data-scrollto" => "#screen_4"} сумки
+      %a.menu-item.js__toggler-hover{:href => "catalog.html", :"data-toggle" => "#menu5", :"data-scrollto" => "#screen_5"} аксессуары
+      %a.menu-item.js__toggler-hover{:href => "catalog.html", :"data-toggle" => "#menu6", :"data-scrollto" => "#screen_6"} sale
+
+- if data.page.banner
+  = partial :banner

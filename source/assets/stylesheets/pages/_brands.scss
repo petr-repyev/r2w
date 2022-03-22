@@ -1,0 +1,118 @@
+.brands-page {
+  overflow: hidden;
+  .side {
+    margin: 0;
+    padding-left: 20px;
+    background: #f5f3f1;
+    padding-bottom: 1000em;
+    margin-bottom: -1000em;
+  }
+  .alphabet {
+    margin-top: -35px;
+    margin-left: -20px;
+    padding-top: 35px;
+    padding-left: 20px;
+    padding-bottom: 16px;
+    @include respond-to(tablet) {
+      margin-top: -63px;
+      padding-top: 63px;
+      margin-right: -20px;
+    }
+  }
+}
+.brands {
+  text-align: center;
+}
+.brands-col {
+  text-align: left;
+  width: 208px;
+  margin: 0 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.brands-list {
+  margin-bottom: 30px;
+  font-size: 12px;
+  h2 {
+    font-size: 34px;
+    letter-spacing: .2em;
+    margin-bottom: .3em;
+  }
+  li {
+    margin-bottom: .75em;
+  }
+}
+
+
+@include respond-to(mob) {
+  .brands-page {
+    background: #f7f3f0;
+    margin-top: -18px;
+    padding-top: 18px;
+    h1 {
+      font-size: 24px;
+      margin: 0 0 1em;
+      text-align: center;
+    }
+    .side-title {
+      display: none;
+    }
+    .side {
+      display: none;
+    }
+  }
+  .brands-col {
+    display: block;
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .brands-list {
+    margin: 0;
+    h2 {
+      font-size: 19px;
+      margin: 0;
+      line-height: 50px;
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 18px;
+        @include tgs(arr_r, 8px);
+        transition: transform .3s;
+      }
+    }
+    ul {
+      max-height: 0;
+      opacity: 0;
+      background: #fff;
+      margin-left: -40px;
+      margin-right: -40px;
+      padding: 0 40px 0 60px;
+      font-size: 11px;
+      color: #414141;
+      transition: all .3s;
+      li {
+        margin-bottom: 9px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &.is__active {
+      h2 {
+        &:after {
+          transform: rotate(90deg);
+        }
+      }
+      ul {
+        max-height: 1000px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        opacity: 1;
+        transition: all .3s, opacity .3s linear .2s;
+      }
+    }
+  }
+}

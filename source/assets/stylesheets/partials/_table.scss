@@ -1,0 +1,26 @@
+.table {
+  width: 100%;
+  font-size: 12px;
+  border-bottom: 1px solid #dbdbdb;
+  thead {
+    border-bottom: 1px solid #dbdbdb;
+  }
+  th {
+    padding: 20px;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 11px;
+    color: #909090;
+    text-align: left;
+  }
+  td {
+    padding: 30px 20px;
+  }
+}
+.table_stripped {
+  tbody {
+    tr:nth-child(even) {
+      background: #f0f0f0;
+    }
+  }
+}

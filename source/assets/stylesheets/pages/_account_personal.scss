@@ -1,0 +1,98 @@
+.pblock {
+  margin-bottom: 30px;
+}
+.personal {
+  h2 {
+    margin-bottom: 36px;
+    @include respond-to(mob) {
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+  }
+}
+.personal-info {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  @include respond-to(mob) {
+    margin-bottom: 0;
+  }
+  // border-bottom: 1px solid #dbdbdb;
+}
+.personal-info-toggler {
+  display: inline-block;
+  font: bold 13px $fontAlt;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.personal-info-plain {
+  .personal-info.is__active & {
+    display: none;
+  }
+}
+.personal-info-form {
+  display: none;
+  .personal-info.is__active & {
+    display: block;
+  }
+  .form-row:last-child {
+    margin-bottom: 0;
+  }
+}
+.personal-info-items {
+  text-align: justify;
+  font-size: 12px;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+.personal-info-item {
+  display: inline-block;
+  width: 40%;
+  @include respond-to(mob) {
+    display: block;
+    width: auto;
+  }
+}
+
+
+.address-list {
+  margin-bottom: 28px;
+  font-size: 12px;
+  line-height: 16px;
+}
+.address {
+  position: relative;
+  display: block;
+  padding: 12px 15px 12px 25px;
+  margin-bottom: 16px;
+  color: #a3a3a3;
+  &.is__active {
+    color: #000;
+    background: #fafafa;
+  }
+  input {
+    position: absolute;
+    top: 15px;
+    left: 5px;
+  }
+}
+.address-remove {
+  position: absolute;
+  top: 15px;
+  right: 2px;
+  display: block;
+  cursor: pointer;
+  @include tgs(cross, 10px);
+  .address.is__active & {
+    display: none;
+  }
+}
+
+.personal-pwd {
+  @include respond-to(mob) {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #dbdbdb !important;
+    h2 {
+      margin-bottom: 25px;
+    }
+  }
+}

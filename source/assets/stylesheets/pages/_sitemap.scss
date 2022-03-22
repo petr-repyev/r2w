@@ -1,0 +1,54 @@
+.sitemap {
+  margin-bottom: 120px;
+}
+.sitemap-section {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dbdbdb;
+  &:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+  h1 {
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: .1em;
+    margin-bottom: .5em;
+  }
+  .fmenu {
+    text-align: center;
+    font-size: 12px;
+    @include respond-to(mob) {
+      margin-left: 45px;
+    }
+    a {
+      &:hover {
+        opacity: .65;
+      }
+    }
+  }
+  .fmenu-block {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    width: 130px;
+    margin: 0 10px;
+    padding: 0;
+    @include respond-to(mob) {
+      display: block;
+      width: auto;
+      margin: 0 0 ;
+    }
+    h2 {
+      font-size: 17px;
+      text-transform: none;
+      margin-bottom: 1em;
+      a {
+        color: #000;
+      }
+      &:after {
+        content: normal;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.cart
+  %h1 Корзина
+  .box
+    .pblock
+      .empty-message 
+        %p Вы еще не добавили в корзину ни одного товара. 
+        %p.empty-additional Возможно, вам понравится что-нибудь из наших последних поступлений:
+        / %tr.order-info
+        /   %td.order-delivery{:colspan => "3"}
+        /     %h2 доставка:
+        /     %p 
+        /       %strong Регионы: Pony Express
+        /     %p Ростовская обл., г. Таганрог,  ул. Ленина, д. 32, кв. 1
+    .additional
+      = partial :"blocks/slider"

@@ -1,0 +1,148 @@
+.page_thanx {
+  padding-top: 0;
+}
+.thanx {
+  margin: 16px;
+  padding: 1px;
+  background-size: cover;
+  background-position: 50% 0;
+  @include respond-to(mob) {
+    background: none !important;
+  }
+}
+.thanx-body {
+  margin: 88px auto;
+  padding: 34px 58px;
+  width: 506px;
+  background: #f5f5f4;
+  font-size: 12px;
+  box-sizing: border-box;
+  @include respond-to(mob) {
+    padding: 0 20px;
+    margin: 0;
+    width: auto;
+    background: none;
+  }
+  h1 {
+    margin: 0 0 19px;
+    text-align: left;
+    text-transform: none;
+    font-size: 17px;
+    font-weight: normal;
+    @include respond-to(mob) {
+      font-size: 15px;
+      line-height: 22px;
+    }
+  }
+}
+.thanx-info {
+  line-height: 22px;
+  margin-bottom: 26px;
+  color: #666;
+  strong {
+    display: block;
+    color: #000;
+    @include respond-to(mob) {
+      display: inline;
+    }
+  }
+}
+.thanx-num {
+  float: left;
+  width: 135px;
+  @include respond-to(mob) {
+    float: none;
+    width: auto;
+  }
+}
+.thanx-share {
+  font: 14px $fontAlt;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  // .social {
+  //   margin-left: .5em;
+  //   display: inline-block;
+  //   vertical-align: middle;
+  //   position: relative;
+  //   top: -2px;
+  //   @include respond-to(mob) {
+  //     display: block;
+  //     position: static;
+  //     margin-left: 0;
+  //     margin-top: 4px;
+  //   }
+  // }
+  .sharers {
+    display: inline-block;
+  }
+}
+.thanx-share-txt {
+  float: left;
+  line-height: 22px;
+  margin-right: .5em;
+}
+.thanx-order {
+  overflow: hidden;
+  margin: 12px -20px 20px;
+  background: #fff;
+  border: 1px solid #d3d2d2;
+  padding: 11px 14px;
+}
+.thanx-order-image {
+  float: left;
+  max-height: 116px;
+  margin-right: 16px;
+}
+.thanx-order-body {
+  overflow: hidden;
+  @include respond-to(mob) {
+    line-height: 116px;
+  }
+  h2 {
+    margin: 5px 0 10px;
+    font: 14px/22px $fontMain;
+    text-transform: none;
+    letter-spacing: 0;
+    @include respond-to(mob) {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+  p {
+    margin: 8px 0;
+    font-size: 11px;
+    line-height: 17px;
+    color: #9e9e9e;
+    @include respond-to(mob) {
+      display: none;
+    }
+  }
+}
+.thanx-share-info {
+  position: relative;
+  margin-left: 14px;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 18px;
+  color: #959595;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: -27px;
+    @include tgs(i, 14px);
+  }
+  @include respond-to(mob) {
+    font-size: 11px;
+    &:before {
+      position: relative;
+      top: -1px;
+      left: 0;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  @include a;
+}

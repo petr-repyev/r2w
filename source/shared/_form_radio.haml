@@ -1,0 +1,5 @@
+.form-label= title
+- for radio in data
+  %label.form-radio
+    %input{:type => "radio", :name => name}/ 
+    %span= radio

@@ -1,0 +1,93 @@
+- is__cancelled ||= false
+- oclass = ''
+- if is__cancelled
+  - oclass += ' is__cancelled'
+%tr.olist-desc.js__table-clicker{:class => oclass}
+  %td.olist-clps
+    %a.olist-collapse{:href => "#"}
+  %td.olist-num
+    %strong Заказ № 124564567
+  %td.olist-date 6 июля 2013
+  %td.olist-kind WebMoney
+  %td.olist-status Не оплачен
+  %td.olist-price
+    %strong 30 400 р.
+%tr.olist-item.js__table-box
+  %td{:colspan => "6"}
+    %table.table.order-table
+      %colgroup
+        %col.order-col_img/
+        %col.order-col_name/
+        %col.order-col_size/
+        %col.order-col_amount/
+        %col.order-col_price/
+        %col.order-col_sum/
+        %col.order-col_remove/
+      %thead
+        %tr
+          %th
+          %th Товар
+          %th Размер
+          %th Кол-во
+          %th Цена
+          %th Итого
+      %tbody
+        %tr.order-item
+          %td.order-item-image
+            %a{:href => "item.html"}
+              %img{:src => "#{images_dir}/data/o1.jpg", :alt => ""}/
+          %td.order-item-info
+            %h2
+              %a{:href => "item.html"} Alexis Mabille
+            %p.order-desc Рубашка синего цвета
+          %td.order-item-size
+            %span.on__mobile Размер:
+            FR 38
+          %td.order-item-amount
+            1
+          %td.order-item-price
+            21 500 p.
+          %td.order-item-sum
+            %strong 21 500 p.
+        %tr.order-item
+          %td.order-item-image
+            %a{:href => "item.html"}
+              %img{:src => "#{images_dir}/data/o2.jpg", :alt => ""}/
+          %td.order-item-info
+            %h2
+              %a{:href => "item.html"} Donna Karan
+            %p.order-desc Узкие укороченные брюки
+          %td.order-item-size
+            %span.on__mobile Размер:
+            FR 38
+          %td.order-item-amount
+            1
+          %td.order-item-price
+            19 000 p.
+          %td.order-item-sum
+            %strong 19 000 p.
+    .order-additional.clear
+      .order-delivery
+        %h2 Доставка
+        %p.order-delivery-type Регионы: Pony Express
+        %p Ростовская обл., г. Таганрог,  ул. Ленина, д. 32, кв. 1
+      .order-summary
+        %table.order-check
+          %tr
+            %td Стоимость:
+            %td 40 500 р.
+          %tr
+            %td Доставка:
+            %td 300 р.
+          %tr
+            %td Скидка:
+            %td 10 000 р.
+          %tr
+            %td Бонусы:
+            %td 500 р.
+          %tr
+            %td Купон:
+            %td 100 р.
+          %tr
+            %td Итого:
+            %td 30 400 р.

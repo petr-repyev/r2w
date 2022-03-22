@@ -1,0 +1,211 @@
+.index {
+  .main {
+    padding-top: 0;
+  }
+}
+.screens {
+  opacity: 0;
+  transition: opacity .5s ease;
+  @include respond-to(tablet) {
+    opacity: 1;
+  }
+  &.is__active {
+    opacity: 1;
+  }
+}
+.screen {
+  height: 500px;
+  position: relative;
+  box-sizing: border-box;
+  padding: 16px 16px 0;
+  text-align: center;
+  transition-property: height, line-height;
+  transition-duration: .3s;
+  @include respond-to(tablet) {
+    line-height: 500px;
+    height: auto !important;
+    padding: 0;
+  }
+  @include respond-to(mob) {
+    line-height: 250px !important;
+  }
+  &.is__active {
+    @include respond-to(desktop) {
+      line-height: 20px !important;
+    }
+    .menu {
+      // opacity: 0;
+      transition-delay: .15s;
+    }
+  }
+}
+.screen-image {
+  height: 100%;
+}
+.screen-image {
+  background-size: cover;
+  background-position: 50%;
+}
+.screen-menu {
+  position: relative;
+  z-index: 50;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  color: #fff;
+  a {
+    transition: opacity .2s;
+    &:hover {
+      opacity: .5;
+    }
+  }
+  h1 {
+    display: inline-block;
+    font: bold 48px/61px $fontAlt;
+    letter-spacing: .3em;
+    padding: 0 20px;
+    margin: 0 0 4px;
+    background: rgba(0,0,0,.6);
+    @include respond-to(mob) {
+      font-size: 25px;
+      line-height: 45px;
+      letter-spacing: .2em;
+    }
+  }
+  .menu {
+    transition: opacity .3s;
+    @include respond-to(mob) {
+      display: none;
+    }
+  }
+  .menu-in {
+    display: inline-block;
+    line-height: 61px;
+    padding: 0 20px;
+    background: rgba(0,0,0,.6);
+    white-space: nowrap;
+  }
+}
+.promos {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  letter-spacing: -.3em;
+  text-align: center;
+  @include respond-to(tablet) {
+    position: relative;
+    bottom: 0;
+    overflow: hidden;
+    &.promos_3 {
+      .promo {
+        width: 33.33%;
+      }
+    }
+    &.promos_2 {
+      .promo {
+        width: 50%;
+      }
+    }
+    &.promos_1 {
+      .promo {
+        width: 50%;
+        margin-left: 25%;
+      }
+    }
+    .promo {
+      margin: 0;
+      float: left;
+    }
+    .promo_framed {
+      border: 0;
+    }
+  }
+  @include respond-to(mob) {
+    &.promos_3 {
+      .promo {
+        width: 50%;
+        &:first-child {
+          display: block;
+          float: none;
+          width: 100%;
+          // max-width: 300px;
+        }
+      }
+    }
+    &.promos_1 {
+      .promo {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+}
+.promos_additional {
+  bottom: 1000em;
+  opacity: 0;
+  transition: opacity .3s ease, bottom 0 ease .3s;
+  @include respond-to(tablet) {
+    bottom: auto;
+    display: none;
+  }
+  .screen.is__active & {
+    opacity: 1;
+    bottom: 255px;
+    transition: opacity .5s ease .3s;
+    @include respond-to(tablet) {
+      display: block;
+      bottom: 0;
+    }
+  }
+}
+.promos-toggler {
+  position: absolute;
+  z-index: 20;
+  bottom: 210px;
+  left: 50%;
+  margin-left: 436px;
+  background: #000;
+  cursor: pointer;
+  transition: bottom .3s;
+  @include tgs(refresh, 40px);
+  @include respond-to(tablet) {
+    right: 20px;
+    left: auto;
+    bottom: -20px;
+    margin-left: 0;
+  }
+  &:hover {
+    opacity: .85;
+  }
+  .screen.is__active & {
+    bottom: 435px;
+    @include tgs(croos_ob, 40px);
+    @include respond-to(tablet) {
+      bottom: -20px;
+    }
+  }
+}
+.info {
+  font: 14px/23px $fontAlt;
+  text-transform: uppercase;
+  padding-top: 16px;
+  &:before {
+    content: '';
+    display: inline-block;
+    // @include sbgs(i_m);
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-top: -3px;
+  }
+  @include respond-to(tablet) {
+    padding-top: 0;
+    line-height: 55px;
+  }
+  @include respond-to(mob) {
+    display: none;
+  }
+}
+.info-side {
+  float: right;
+}

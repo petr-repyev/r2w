@@ -1,0 +1,30 @@
+- image ||= false
+- text ||= lorem.words 3
+- framed ||= false
+- white ||= false
+- screen ||= 1
+- from ||= 0
+- to ||= 0
+- promo_class = 'promo'
+- is_prlxed ||= false
+- if (framed == true) then promo_class += ' promo_framed' end
+- if (white == true) then promo_class += ' promo_framed_white' end
+- unless (image)
+  - image = images_dir + '/data/promo.png'
+  - promo_class += ' promo_black'
+
+- skrollFrom = Random.rand(-50...50)
+- skrollTo = Random.rand(-50...50)
+
+- if is_prlxed
+  %a{:href => "item.html", :class => promo_class, :"data-bottom" => "top: #{skrollFrom}px;", :"data-55-top" => "top: 0px", :"data-top-bottom" => "top: #{skrollTo}px", :"data-anchor-target" => "#screen_#{screen}" }
+    %img.promo-image{:src => image, :alt => ""}/
+    %span.promo-text
+      %span.promo-text-wrapper
+        %span.promo-text-body= text
+- else
+  %a{:href => "item.html", :class => promo_class}
+    %img.promo-image{:src => image, :alt => ""}/
+    %span.promo-text
+      %span.promo-text-wrapper
+        %span.promo-text-body= text

@@ -1,0 +1,43 @@
+.alert {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #e65754;
+  z-index: 1010;
+  color: #fff;
+  font: italic 16px/1 $fontAlt;
+  padding: 19px 40px 20px 16px;
+  min-height: 16px;
+  @include respond-to(mob) {
+    font-size: 14px;
+    min-height: 14px;
+    padding: 6px 30px 7px 12px;
+  }
+}
+.alert-close {
+  position: absolute;
+  top: 19px;
+  right: 16px;
+  cursor: pointer;
+  @include tgs(cross_w, 15px);
+  &:hover {
+    opacity: .65;
+  }
+  @include respond-to(mob) {
+    top: 7px;
+    right: 6px;
+    @include tgs(cross_w, 12px);
+  }
+}
+
+
+.is__alerted {
+  .alert {
+    display: block;
+  }
+  .nervous {
+    margin-top: 55px;
+  }
+}

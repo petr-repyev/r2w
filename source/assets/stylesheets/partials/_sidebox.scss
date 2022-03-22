@@ -1,0 +1,56 @@
+.sidebox {
+  @include respond-to(tablet) {
+    transform: translateX(-100%);
+    z-index: 500;
+    &.is__active {
+      transform: translateX(0);
+    }
+    .block-body li {
+      margin-bottom: 0;
+      a {
+        display: inline-block;
+        padding: 4px 0 5px;
+      }
+    }
+  }
+  @include respond-to(mob) {
+    z-index: 1100;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    // right: 0;
+    .sidebox-body {
+      background: #f5f3f1;
+      box-sizing: border-box;
+      padding: 20px;
+      height: 100%;
+      overflow: auto;
+      position: relative;
+      z-index: 1111;
+    }
+  }
+}
+.sidebox-close {
+  display: none;
+  @include respond-to(mob) {
+    display: block;
+    opacity: 0;
+    position: fixed;
+    top: 0; bottom: 0; left: 0;;
+
+    background: rgba(0,0,0,.7);
+    transition: opacity .2s .2s;
+    cursor: pointer;
+    .sidebox.is__active & {
+      opacity: 1;
+      right: -1000em;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        // @include sbgs(bclose);
+      }
+    }
+  }
+}

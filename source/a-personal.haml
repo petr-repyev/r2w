@@ -1,0 +1,97 @@
+---
+menu_personal: "is__active"
+---
+%h1.on__mobile персональная информация
+.box.personal.cols
+  .col
+    .pblock
+      %h2 Личные данные
+      .personal-info.js__block
+        .personal-info-plain
+          .personal-info-items
+            %span.personal-info-item Иван Петров
+            %span.personal-info-item 23 декабря 1980
+            %span.personal-info-item ivan_vladimir@gmail.com
+            %span.personal-info-item мужской
+            %span.personal-info-item +7 (917) 87 66 87
+          %a.personal-info-toggler.js__block-clicker{:href => "#"}  Изменить
+        %form.form.personal-info-form{:action => "#"}
+          .form-row
+            = partial :form_input, :locals => {:title => "Ваше имя:", :name => "acc_name", :value => "Владимир"}
+          .form-row
+            = partial :form_input, :locals => {:title => "Фамилия:", :name => "acc_sname", :value => "Иванов"}
+          .form-row
+            = partial :form_input, :locals => {:title => "E-mail:", :name => "acc_mail", :value => "ivanov_vladimir@gmail.com"}
+          .form-row
+            = partial :form_input, :locals => {:title => "Телефон:", :name => "acc_phone", :value => "+7 (917) 87 66 87"}
+          .form-row
+            .form-label Дата рождения:
+            = partial :form_select, :locals => {:name => "acc_day", :data => ["23", "24", "25", "26"], :width => "70px"}
+            = partial :form_select, :locals => {:name => "acc_month", :data => ["октября", "ноября"], :width => "130px"}
+            = partial :form_select, :locals => {:name => "acc_year", :data => ["1987", "1988"], :width => "100px"}
+            .form-helper (в день рождения приходит подарочный купон на скидку)
+          .form-row
+            = partial :form_radio, :locals => {:title => "Пол", :name => "acc_gender", :data => ["мужской", "женский"]}
+          %a.personal-info-toggler.js__block-clicker{:href => "#"} Сохранить
+    .block.pblock.personal-pwd.js__block
+      %h2.block-header
+        %a.js__block-clicker{:href => "#"} Изменить пароль
+      .block-body
+        .form-row
+          = partial :form_input, :locals => {:title => "Текущий пароль:", :name => "acc_password_old", :type => "password"}
+        .form-row
+          = partial :form_input, :locals => {:title => "Новый:", :name => "acc_password_new", :type => "password"}
+        .form-row
+          = partial :form_input, :locals => {:title => "Подтверждение пароля:", :name => "acc_password_new2", :type => "password"}
+        %a.saver.js__block-clicker{:href => "#"} Сохранить пароль
+  .col.pblock
+    %h2 Адреса доставки
+    .address-list
+      %label.address.is__active.js__line
+        %input{:type => "radio", :name => "address", :checked => ""}/
+        %span.address-remove.js__line-remover
+        Ростовская обл., г. Таганрог,  ул. Ленина, д. 32, кв. 1
+      %label.address.js__line
+        %input{:type => "radio", :name => "address"}/
+        %span.address-remove.js__line-remover
+        Краснодарский кр., г. Новороссийск, ул. Ленина, д. 32, кв.1
+      %label.address.js__line
+        %input{:type => "radio", :name => "address"}/
+        %span.address-remove.js__line-remover
+        Ленинградская обл., г. Пушкин, ул. Красная, д. 75
+    .block.js__block
+      %h2.block-header
+        %a.js__block-clicker{:href => "#"} Добавить еще один адрес
+      .block-body
+        %form.form.js__prechoice{:action => "#"}
+          .form-row
+            .prechoice
+              %span предвыбор:
+              %a.js__prechoice-filler{:href => "#", :"data-prechoice-city" => "Москва", :"data-prechoice-region" => 0, :"data-prechoice-country" => 0} москва
+              %a.js__prechoice-filler{:href => "#", :"data-prechoice-city" => "Санкт-Петербург", :"data-prechoice-region" => 1, :"data-prechoice-country" => 0} санкт-петербург
+
+          .form-row
+            = partial :form_select, :locals => {:title => "Cтрана:", :name => "acc_country", :data => ["Россия", "Нероссия"], :width => "100%", :prechoice => "country"}
+          .form-row
+            = partial :form_select, :locals => {:title => "Регион:", :name => "acc_region", :data => ["Москва", "Санкт-Петербург", "Ростовская область", "Тверская область"], :prechoice => "region"}
+          .form-row
+            = partial :form_input, :locals => {:title => "Город (населенный пункт):", :name => "acc_city", :prechoice => "city"}
+          .form-row.form-error
+            = partial :form_input, :locals => {:title => "Адрес:", :name => "acc_address"}
+          .form-row
+            / = partial :form_input, :locals => {:title => "Индекс:", :name => "acc_zip"}
+            %label.form-label{:for => "acc_zip"} Индекс:
+            %span.form-helper.form-helper.form-helper_zip заполнять необязательно
+            %input.form-input#acc_zip{:type => "text", :name => "acc_zip", :maxlength => "6"}/
+          .form-row
+            %label.form-checkbox
+              %input{:type => "checkbox"}/
+              Сделать адресом доставки <br/> по умолчанию
+          %a.button.button_alt{:href => "#"} добавить адрес
+  .button-box
+    %a.button.js__popup-link{:href => "#p_ok"} Сохранить изменения
+
+.popup.mfp-hide#p_ok
+  %h2 Изменения успешно сохранены
+  .popup-footer
+    %a.button.js__popup-closer{:href => "#"} Окей

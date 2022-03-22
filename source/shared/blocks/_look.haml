@@ -1,0 +1,12 @@
+.item-wrapper
+  .item.item_look.js__item
+    .item-top
+      .item-image
+        %img{:src => "#{images_dir}/data/look.jpg", :alt => ""}/
+    .item-info
+      .item-name.item_look-fav
+        %a.js__item-fav{:href => "item.html"} Весь look в wishlist
+
+  = partial :product, :locals => {:id => 10, :name => "LENA BY LENA VASILYEVA", :desc => "Неоприновое платье с розой", :price => "18.900 р."}\
+  = partial :product, :locals => {:id => 11, :name => "Saint Laurent", :desc => "Белые хлопковые шорты", :price => "21.000 р."}\
+  = partial :product, :locals => {:id => 12, :name => "CHRISTIAN LOUBOUTIN", :desc => "Miss Penniman кожанные, Босоножки", :price => "19.200 р."}\

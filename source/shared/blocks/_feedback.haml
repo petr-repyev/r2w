@@ -1,0 +1,17 @@
+.popup.mfp-hide#feedback
+  .feedback
+    %h2 Чем мы можем вам помочь?
+    %form.feedback-form.js__form{:action => "#", :novalidate => ""}
+      .form-row
+        = partial :form_input, :locals => {:title => "e-mail:", :name => "feedback_mail", :type => "email", :is_required => true}
+      .form-row
+        %label.form-label{:for => "feedback_text"} Вопрос:
+        %textarea.form-input#feedback_text{:name => "feedback_text", :cols => "30", :rows => "10", :required => ""}
+        .form-notifier
+      .form-row.form-row_btn
+        %button.button{:type => "submit"} задать вопрос
+        %a.js__form-go.js__popup-link.none{:href => "#feedback-ok"} задать вопрос
+.popup.popup_centered.mfp-hide#feedback-ok
+  %h2 Ваше сообщение отправлено
+  %footer.popup-footer
+    %a.button.js__popup-closer{:href => "#"} Окей

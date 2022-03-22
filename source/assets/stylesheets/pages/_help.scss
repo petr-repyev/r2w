@@ -1,0 +1,139 @@
+.help {
+  background: #f0f0f0;
+  h1 {
+    @include respond-to(mob) {
+      margin-left: 35px;
+    }
+  }
+  @include respond-to(tablet) {
+    background: #fff;
+    padding-bottom: 30px;
+  }
+}
+.inner {
+  background: #fff;
+  font-size: 13px;
+  line-height: 22px;
+  margin-bottom: 30px;
+  @include respond-to(tablet) {
+    border-top: 1px solid #f0f0f0;
+  }
+  @include respond-to(mob) {
+    font-size: 11px;
+    line-height: 18px;
+    border-top: 0;
+  }
+  h2 {
+    position: relative;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 24px;
+    @include respond-to(tablet) {
+      margin-top: .5em;
+    }
+    @include respond-to(mob) {
+      font-size: 16px;
+      margin-top: 0;
+    }
+    .imgs {
+      right: 0;
+      @include respond-to(mob) {
+        position: static;
+        display: block;
+        margin: 0;
+        img {
+          max-height: 40px;
+        }
+      }
+    }
+  }
+  h3 {
+    position: relative;
+    margin-top: 32px;
+    font: 19px $fontAlt;
+    @include respond-to(mob) {
+      font-size: 13px;
+    }
+    .imgs {
+    }
+  }
+  h4 {
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    font: normal 14px $fontAlt;
+    @include respond-to(mob) {
+      font-size: 13px;
+    }
+  }
+  p {
+    position: relative;
+  }
+  .imgs {
+      margin-top: -17px;
+    margin-left: 1em;
+    position: absolute;
+    line-height: 53px;
+    z-index: 0;
+    @include respond-to(tablet) {
+      right: 0;
+    }
+    img {
+      vertical-align: middle;
+    }
+  }
+  .outlink {
+    @include respond-to(mob) {
+      font-size: 10px;
+    }
+  }
+  .button {
+    font-size: 14px;
+    line-height: 31px;
+    height: 31px;
+    width: 172px;
+    @include respond-to(mob) {
+      margin-top: 8px;
+    }
+  }
+  .cols_3 {
+    .col {
+      width: 200px;
+    }
+  }
+}
+.ilinks {
+  font: bold 15px/20px $fontAlt;
+}
+.inner-section {
+  padding: 20px 70px;
+  border-bottom: 1px solid #f0f0f0;
+  &:last-child {
+    border-bottom: 0;
+  }
+  @include respond-to(tablet) {
+    padding: 20px 45px;
+  }
+  @include respond-to(mob) {
+    padding: 10px 35px ;
+    border-bottom: 0;
+    margin-bottom: 24px;
+  }
+}
+.pale {
+  color: #a3a3a3;
+}
+.return {
+  font-style: italic;
+}
+.payment {
+  color: #999;
+  p {
+    margin: .5em 0;
+    @include respond-to(mob) {
+      margin-bottom: 0;
+    }
+    &:before {
+      content: '•';
+    }
+  }
+}

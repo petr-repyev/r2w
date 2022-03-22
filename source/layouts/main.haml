@@ -1,0 +1,10 @@
+!!!
+%html
+  = partial :head
+  = javascript_include_tag "main"
+  %body.nervous{:class => data.page.body_class}
+    = partial :header
+    .main.clear
+      = yield
+    = partial :footer
+    = partial :hidden

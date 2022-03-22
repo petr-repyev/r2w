@@ -1,0 +1,115 @@
+%footer.footer.footer_fixed.is__active
+  .holder
+    .footer-desk
+      .footer-social.social
+        %a.social-item.social-item_fb{:href => "#", :title => "Фэйсбук"} Фэйсбук
+        %a.social-item.social-item_vk{:href => "#", :title => "Вконтакте"} Вконтакте
+        %a.social-item.social-item_tw{:href => "#", :title => "Твиттер"} Твиттер
+        %a.social-item.social-item_ig{:href => "#", :title => "Инстаграм"} Инстаграм
+      %a.footer-magazine.js__toggler-hover{:href => "#", :"data-toggle" => "#magazine"}
+        %span.footer-magazine-in R*2*W Magazine
+      .footer-menu.menu
+        %a.menu-item{:href => "a-wishlist.html"} wishlist
+        %a.menu-item{:href => "#"} о компании
+        %a.menu-item{:href => "h-help.html"} помощь
+        %span.menu-item
+          %span.phone +7 (495) 609-69-68
+    .footer-mobile
+      %a.footer-mobile-like{:href => "a-wishlist.html"}
+      %a.footer-mobile-info{:href => "h-help.html"}
+%footer.footer.footer_static
+  .holder
+    .fmenu
+      .fmenu-block
+        %h2 Follow us
+        %ul.social
+          %li
+            %a{:href => "#"}
+              %span.social-item.social-item_fb
+              Facebook
+          %li
+            %a{:href => "#"}
+              %span.social-item.social-item_vk
+              Вконтакте
+          %li
+            %a{:href => "#"}
+              %span.social-item.social-item_tw
+              Twitter
+          %li
+            %a{:href => "#"}
+              %span.social-item.social-item_ig
+              Instagram
+      .fmenu-block
+        %h2 Мой аккаунт
+        %ul
+          %li
+            %a{:href => "a-wishlist.html"} Wishlist
+          %li
+            %a.js__toggler-click{:href => "#", :"data-toggle" => "#login"} Войти
+          %li
+            %a.js__toggler-click{:href => "#", :"data-toggle" => "#register"} Регистрация
+      .fmenu-block
+        %h2 О компании
+        %ul
+          %li
+            %a{:href => "#"} О нас
+          %li
+            %a{:href => "#"} Контакты
+          %li
+            %a{:href => "#"} Подарочная карта
+          %li
+            %a{:href => "#"} Бонусная программа
+          %li
+            %a{:href => "#"} Условия использования
+          %li
+            %a{:href => "#"} Сотрудничество
+          %li
+            %a{:href => "#"} Вакансии
+      .fmenu-block
+        %h2 Помощь
+        %ul
+          %li
+            %a{:href => "h-payment.html"} Оплата
+          %li
+            %a{:href => "h-delivery.html"} Доставка
+          %li
+            %a{:href => "h-return.html"} Обмен и возврат
+          %li
+            %a{:href => "h-qa.html"} Вопрос-ответ
+          %li
+            %a.js__popup-link{:href => "#feedback"} Задать вопрос
+          %li
+            .phone +7 (495) 609-69-68
+      .fmenu-block
+        %h2 <span>R*2*W</span> magazine
+        %ul
+          %li
+            %a{:href => "j-journal.html"} Журнал
+          %li
+            %a{:href => "j-trends.html"} Тренды
+          %li
+            %a{:href => "j-media.html"} Пресса о нас
+    .fcopy
+      &copy; Ready-to-wear, 2013
+    .flogos
+      .flogos-block.flogos-block_pay
+        %img{:src => "#{images_dir}/data/pay1.png", :alt => ""}/
+        %img{:src => "#{images_dir}/data/pay2.png", :alt => ""}/
+        %img{:src => "#{images_dir}/data/pay3.png", :alt => ""}/
+        %img{:src => "#{images_dir}/data/pay4.png", :alt => ""}/
+        %img{:src => "#{images_dir}/data/pay5.png", :alt => ""}/
+      .flogos-block.flogos-block_par
+        %a{:href => "#"}
+          %img{:src => "#{images_dir}/data/partner1.png", :alt => ""}/
+        %a{:href => "#"}
+          %img{:src => "#{images_dir}/data/partner2.png", :alt => ""}/
+        %a{:href => "#"}
+          %img{:src => "#{images_dir}/data/partner3.png", :alt => ""}/
+        %a{:href => "#"}
+          %img{:src => "#{images_dir}/data/partner4.png", :alt => ""}/
+  .fsubscribe.js__subscribe
+    .holder
+      .fsubscribe-text Be up to date
+      %form.fsubscribe-form{:action => "#"}
+        %input.input.js__subscribe-input{:type => "text", :placeholder => "Email"}/
+        %button.button.js__subscribe-button{:type => "submit"} Подписаться

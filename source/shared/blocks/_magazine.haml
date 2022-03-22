@@ -1,0 +1,20 @@
+.js__tbox.menubox.magazinebox#magazine
+  .holder
+    .menubox-block
+      %h2
+        %a{:href => "#"} Журнал
+      %ul
+        %li
+          %a{:href => "#"} Все номера
+        %li
+          %a{:href => "#"} Номер 27, март
+        %li
+          %a{:href => "#"} Номер 26, февраль
+        %li
+          %a{:href => "#"} Номер 25, январь
+      %h2
+        %a{:href => "#"} Пресса о нас
+      %h2
+        %a{:href => "#"} Тренды
+    .menubox-block.menubox-block_wide
+      = partial :promo, :locals => {:image => "#{images_dir}/data/mb.jpg", :text => "<strong>тренды</strong> <br/>лета <small>2013</small>", :framed => true}

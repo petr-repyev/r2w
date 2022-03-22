@@ -1,0 +1,112 @@
+---
+title: Главная
+body_class: index index_prlx
+---
+= partial :"blocks/designers"
+.screens.js__screens
+  .screen.screen_1.js__screen#screen_1
+    .screen-image{:style => "background-image: url(#{images_dir}/data/splash1.jpg);"}
+      .screen-menu
+        %h1
+          %a{:href => "catalog.html"} Новинки
+        .menu
+          .menu-in
+            %a.menu-item{:href => "catalog.html"} Все
+            %a.menu-item{:href => "catalog.html"} новинки
+            %a.menu-item{:href => "catalog.html"} платья
+            %a.menu-item{:href => "catalog.html"} брюки
+            %a.menu-item{:href => "catalog.html"} юбки
+    .promos-toggler
+    .promos.promos_3
+      = partial :promo, :locals => {:image => "#{images_dir}/data/promo1.jpg", :text => "твое заявление <br/><em>секси <small>&</small> урбан</em>", :framed => true, :white => true, :is_prlxed => true, :screen => 1}
+      = partial :promo, :locals => {:image => "#{images_dir}/data/promo2.jpg", :text => "новая коллекция <br/><small>от</small> jimy choo", :framed => true, :is_prlxed => true, :screen => 1}
+      = partial :promo, :locals => {:image => "#{images_dir}/data/promo3.jpg", :text => "сумки <small>и</small> <br/>аксессуары <br/>Веснa/лето <small>‘2013</small>", :framed => true, :white => true, :is_prlxed => true, :screen => 1}
+    .promos.promos_additional.promos_3
+      = partial :promo, :locals => {:image => "#{images_dir}/data/promo1.jpg", :text => "твое заявление <br/><em>секси <small>&</small> урбан</em>", :framed => true, :white => true, :is_prlxed => true, :screen => 1}
+      = partial :promo, :locals => {:image => "#{images_dir}/data/promo2.jpg", :text => "новая коллекция <br/><small>от</small> jimy choo", :framed => true, :is_prlxed => true, :screen => 1}
+      = partial :promo, :locals => {:image => "#{images_dir}/data/promo3.jpg", :text => "сумки <small>и</small> <br/>аксессуары <br/>Веснa/лето <small>‘2013</small>", :framed => true, :white => true, :is_prlxed => true, :screen => 1}
+
+  .screen.screen_2.js__screen#screen_2
+    .screen-image{:style => "background-image: url(#{images_dir}/data/splash2.jpg);"}
+      .screen-menu
+        %h1
+          %a{:href => "catalog.html"} женская одежда
+        .menu
+          .menu-in
+            %a.menu-item{:href => "catalog.html"} Все
+            %a.menu-item{:href => "catalog.html"} новинки
+            %a.menu-item{:href => "catalog.html"} платья
+            %a.menu-item{:href => "catalog.html"} трикотаж
+            %a.menu-item{:href => "catalog.html"} жакеты
+            %a.menu-item{:href => "catalog.html"} купальники
+    .promos.promos_2
+      = partial :promo, :locals => {:image => "#{images_dir}/data/promo4.jpg", :text => "все летние <br/>вещи <small>&</small> аксессуары", :framed => true, :white => true, :is_prlxed => true, :screen => 2}
+      = partial :promo, :locals => {:image => "#{images_dir}/data/promo5.jpg", :text => "<span>50%<small> off</small></span>", :framed => true, :white => true, :is_prlxed => true, :screen => 2}
+
+  .screen.screen_3.js__screen#screen_3
+    .screen-image{:style => "background-image: url(#{images_dir}/data/splash3.jpg);"}
+      .screen-menu
+        %h1
+          %a{:href => "catalog.html"} женская обувь
+        .menu
+          .menu-in
+            %a.menu-item{:href => "catalog.html"} Все
+            %a.menu-item{:href => "catalog.html"} новинки
+            %a.menu-item{:href => "catalog.html"} платья
+            %a.menu-item{:href => "catalog.html"} брюки
+            %a.menu-item{:href => "catalog.html"} юбки
+            %a.menu-item{:href => "catalog.html"} трикотаж
+            %a.menu-item{:href => "catalog.html"} жакеты
+    .promos.promos_1
+      = partial :promo, :locals => {:image => "#{images_dir}/data/promo9.jpg", :text => "carolina angela <br/><small>для</small> versace", :framed => true, :is_prlxed => true, :screen => 3}
+
+  .screen.screen_4.js__screen#screen_4
+    .screen-image{:style => "background-image: url(#{images_dir}/data/splash4.jpg);"}
+      .screen-menu
+        %h1
+          %a{:href => "catalog.html"} Сумки
+        .menu
+          .menu-in
+            %a.menu-item{:href => "catalog.html"} Все
+            %a.menu-item{:href => "catalog.html"} новинки
+            %a.menu-item{:href => "catalog.html"} платья
+            %a.menu-item{:href => "catalog.html"} юбки
+            %a.menu-item{:href => "catalog.html"} жакеты
+            %a.menu-item{:href => "catalog.html"} купальники
+    .promos.promos_1
+      = partial :promo, :locals => {:image => "#{images_dir}/data/promo6.jpg", :text => "классика <br/><small>вне</small> времени", :is_prlxed => true, :screen => 4}
+
+  .screen.screen_5.js__screen#screen_5
+    .screen-image{:style => "background-image: url(#{images_dir}/data/splash5.jpg);"}
+      .screen-menu
+        %h1
+          %a{:href => "catalog.html"} Аксессуары
+        .menu
+          .menu-in
+            %a.menu-item{:href => "catalog.html"} Все
+            %a.menu-item{:href => "catalog.html"} новинки
+            %a.menu-item{:href => "catalog.html"} платья
+            %a.menu-item{:href => "catalog.html"} брюки
+            %a.menu-item{:href => "catalog.html"} жакеты
+            %a.menu-item{:href => "catalog.html"} купальники
+    .promos.promos_2
+      = partial :promo, :locals => {:image => "#{images_dir}/data/promo7.jpg", :text => "иногда дом <br/><small>это</small> чувство", :framed => true}
+      = partial :promo, :locals => {:image => "#{images_dir}/data/promo8.jpg", :text => "один <small>на</small> один <small>с</small> путешествием", :framed => true, :is_prlxed => true, :screen => 5}
+
+  .screen.screen_6.js__screen#screen_6
+    .screen-image{:style => "background-image: url(#{images_dir}/data/splash5.jpg);"}
+      .screen-menu
+        %h1
+          %a{:href => "catalog.html"} SALE
+        .menu
+          .menu-in
+            %a.menu-item{:href => "catalog.html"} Все
+            %a.menu-item{:href => "catalog.html"} новинки
+            %a.menu-item{:href => "catalog.html"} платья
+            %a.menu-item{:href => "catalog.html"} брюки
+            %a.menu-item{:href => "catalog.html"} юбки
+            %a.menu-item{:href => "catalog.html"} трикотаж
+            %a.menu-item{:href => "catalog.html"} жакеты
+    .promos.promos_2
+      = partial :promo, :locals => {:image => "#{images_dir}/data/promo7.jpg", :text => "иногда дом <br/><small>это</small> чувство", :framed => true}
+      = partial :promo, :locals => {:image => "#{images_dir}/data/promo8.jpg", :text => "один <small>на</small> один <small>с</small> путешествием", :framed => true, :is_prlxed => true, :screen => 6}

@@ -1,0 +1,44 @@
+.js__tbox.js__noscroll.userbox.nervous#register
+  %h2 Зарегистрироваться на R2W
+  %form.userbox-form{:action => "#"}
+    %input.input{:type => "text", :placeholder => "Email"}/
+    %button.button{:type => "submit"} Зарегистрироваться
+  .userbox-or или войти через
+  .userbox-social
+    %a.userbox-social-button.userbox-social-button_fb{:href => "#"} Войти через Facebook
+    %a.userbox-social-button.userbox-social-button_vk{:href => "#"} Войти через Вконтакте
+
+.js__tbox.js__noscroll.userbox.nervous#login
+  %h2 Войти на R2W
+  %form.userbox-form{:action => "#"}
+    %input.input{:type => "text", :placeholder => "Email"}/
+    %input.input{:type => "password", :placeholder => "Пароль"}/
+    .userbox-forgot
+      %a.js__toggler-click{:href => "#", :"data-toggle" => "#forgot"} Восстановить пароль
+    %button.button{:type => "submit"} Войти
+  .userbox-or или войти через
+  .userbox-social
+    %a.userbox-social-button.userbox-social-button_fb{:href => "#"} Войти через facebook
+    %a.userbox-social-button.userbox-social-button_vk{:href => "#"} Войти через вконтакте
+
+.js__tbox.js__noscroll.userbox.nervous#forgot
+  %h2 Восстановить пароль
+  %form.userbox-form{:action => "#"}
+    %input.input{:type => "text", :placeholder => "Email"}/
+    %button.button{:type => "submit"} Отравить
+  .userbox-success
+    На ваш email отправлены инструкции по восстановлению пароля
+
+.js__tbox.js__noscroll.userbox.nervous#user
+  %h2 Мой аккаунт
+  %ul
+    %li
+      %a{:href => "#"} Wishlist
+    %li
+      %a{:href => "#"} Мои заказы
+    %li
+      %a{:href => "#"} Персональные данные
+    %li
+      %a{:href => "#"} Адресная книга
+    %li
+      %a{:href => "#"} Выйти 

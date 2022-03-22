@@ -1,0 +1,107 @@
+---
+page_class: "main_item"
+search: "search_done"
+---
+= partial :"blocks/designers"
+.item-page.clear.js__product.js__item.is__disabled
+  .holder
+    .item-photos.js__photo-container
+      .js__photo-list
+        .item-photo.js__photo.is__active
+          %img{:src => "#{images_dir}/data/p1.jpg", :alt => ""}/
+        .item-photo.js__photo
+          %img{:src => "http://lorempixel.com/1920/1920/fashion", :alt => ""}/
+        .item-photo.js__photo
+          %img{:src => "http://lorempixel.com/1920/1920/sports", :alt => ""}/
+        .item-photo.js__photo
+          %img{:src => "http://lorempixel.com/1920/1000/people", :alt => ""}/
+      .item-photos-zoom-in.js__photos-zoom_in Увеличить
+      .item-photos-zoom-out.js__photos-zoom_out Уменьшить
+      .item-photos-overlay.js__photos-overlay
+      .item-photos-nav.item-photos-nav_next.js__photos-nav_next Назад
+      .item-photos-nav.item-photos-nav_prev.js__photos-nav_prev Вперёд
+    .item-content
+      .item-bc
+        %a{:href => "catalog.html"} ‹ Женская одежда
+      %h1.item-name lena by lena vasylieva
+      .item-brand Print mix two pocket silky blouse
+      .item-price
+        13 700 Р.
+        %span.item-lbl.item-lbl_soldout Размер распродан
+
+      .item-thumb-list.js__thumbs
+        %a.item-thumb.js__thumb.is__active{:href => "#"}
+          %img{:src => "#{images_dir}/data/pt1.jpg", :alt => ""}/
+        %a.item-thumb.js__thumb{:href => "#"}
+          %img{:src => "#{images_dir}/data/pt2.jpg", :alt => ""}/
+        %a.item-thumb.js__thumb{:href => "#"}
+          %img{:src => "#{images_dir}/data/pt3.jpg", :alt => ""}/
+        %a.item-thumb.js__thumb{:href => "#"}
+          %img{:src => "#{images_dir}/data/pt4.jpg", :alt => ""}/
+
+      .item-sizes.js__item-sizes
+        .item-size-list
+          .item-size-list-label размер:
+          .item-size-list-in
+            .item-size.js__item-size XS
+            .item-size.js__item-size.is__disabled S
+            .item-size.js__item-size M
+            .item-size.js__item-size.is__disabled L
+
+      %a.item-table-link.outlink.js__popup-link{:href => "#sizechart"} таблица размеров
+
+      .item-buttons.js__item-buttons
+        .item-buy.js__item-buy
+          %a.button.item-buy-tocart.js__item-tocart{:href => "#"} В корзину
+          %span.button.button_alt.item-buy-choose.js__item-choose Выберите размер
+          %span.button.button_alt.item-buy-done Товар добавлен
+        %a.button.button_alt.item-subscribe.js__popup-link{:href => "#item_subscribe"} Подписаться
+        %a.item-fav.js__item-fav{:href => "#"}
+
+      .item-block.block.js__block.is__active
+        %h2.block-header
+          %a.js__block-clicker{:href => "#"} описание
+        .block-body
+          %p Состав: 55 % хлопок, 42% нейлон, 3% эластан <br/>Топ ярко-синего цвета с белым  контрастным принтом отличается свободным силуэтом цельнокроенного рукава длиной в три четверти.
+
+      .item-block.block.js__block
+        %h2.block-header
+          %a.js__block-clicker{:href => "#"} доставка
+        .block-body
+          доставка
+
+      .item-block.block
+        %h2.block-header
+          %a.js__popup-link{:href => "#feedback"} вопрос консультанту
+
+      .item-block.block.js__block.is__active
+        %h2.block-header
+          %a.js__block-clicker share
+        .block-body
+          = partial :social
+      .item-links
+        .item-link.outlink
+          %a{:href => "#"} все блузки
+
+        .item-link.outlink
+          %a{:href => "#"} все вещи этого дизайнера
+
+.additional
+  .holder
+    %h2.additional-header похожие товары
+    = partial :"blocks/slider"
+
+.item-related.item-related_look
+  .holder
+    %h2 shop the look
+    = partial :"blocks/look"
+
+.item-else.on__mobile
+  %h2 Смотреть также
+  %p
+    %a{:href => "#"} Все блузки
+  %p
+    %a{:href => "#"} Все вещи этого дизайнера
+
+
+= partial :"blocks/sizechart"

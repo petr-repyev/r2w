@@ -1,0 +1,58 @@
+%h1 Вопрос-ответ
+.js__qa
+  .inmenu.js__qa-filters
+    %a.inmenu-item.js__qa-filter-item.is__active{:href => "#", :"data-filter" => ""} Все
+    %a.inmenu-item.js__qa-filter-item{:href => "#", :"data-filter" => "work"} работа магазина
+    %a.inmenu-item.js__qa-filter-item{:href => "#", :"data-filter" => "checkout"} оформление заказа
+    %a.inmenu-item.js__qa-filter-item{:href => "#", :"data-filter" => "delivery"} доставка-оплата
+    %a.inmenu-item.js__qa-filter-item{:href => "#", :"data-filter" => "return"} возврат-обмен
+    %a.inmenu-item.js__qa-filter-item{:href => "#", :"data-filter" => "misc"} прочее
+
+  .inner.qa.js__qa-container{:"data-filter" => "work"}
+    .inner-section.qa-item.js__qa-item{:"data-filter" => "work"}
+      %h2 Как узнать, когда вещь из «Предзаказа» будет получена?
+      .qa-body
+        %p= lorem.paragraph
+        %p= lorem.paragraph
+    .inner-section.qa-item.js__qa-item{:"data-filter" => "checkout"}
+      %h2 Каковы преимущества предзаказа?
+      .qa-body
+        %ul
+          %li Вы получаете предзаказанную Вами вещь раньше других
+          %li Вещь из предзаказа будет для Вас стоить в итоге с 10%-ой скидкой от финальной стоимости
+          %li Вы не оплачиваете всю сумму сразу, а вносите лишь небольшую часть (предоплату). 
+    .inner-section.qa-item.js__qa-item{:"data-filter" => "work"}
+      %h2 Подскажите, пожалуйста, могу ли я при заказе двух пар обуви, в итоге выбрать одну при доставке?
+      .qa-body
+        %p= lorem.paragraph
+    .inner-section.qa-item.js__qa-item{:"data-filter" => "return misc"}
+      %h2 Подскажите, пожалуйста, как оплатить по кредитной карте?
+      .qa-body
+        %p= lorem.paragraph
+    .inner-section.qa-item.js__qa-item{:"data-filter" => "checkout"}
+      %h2 Как получить купон на скидку?
+      .qa-body
+        %p= lorem.paragraph
+    .inner-section.qa-item.js__qa-item{:"data-filter" => "work"}
+      %h2 Как узнать, когда вещь из «Предзаказа» будет получена?
+      .qa-body
+        %p= lorem.paragraph
+    .inner-section.qa-item.js__qa-item{:"data-filter" => "work checkout delivery misc"}
+      %h2 Каковы преимущества предзаказа?
+      .qa-body
+        %ul
+          %li Вы получаете предзаказанную Вами вещь раньше других
+          %li Вещь из предзаказа будет для Вас стоить в итоге с 10%-ой скидкой от финальной стоимости
+          %li Вы не оплачиваете всю сумму сразу, а вносите лишь небольшую часть (предоплату). 
+    .inner-section.qa-item.js__qa-item{:"data-filter" => "work delivery"}
+      %h2 Подскажите, пожалуйста, могу ли я при заказе двух пар обуви, в итоге выбрать одну при доставке?
+      .qa-body
+        %p= lorem.paragraph
+    .inner-section.qa-item.js__qa-item{:"data-filter" => "delivery"}
+      %h2 Подскажите, пожалуйста, как оплатить по кредитной карте?
+      .qa-body
+        %p= lorem.paragraph
+    .inner-section.qa-item.js__qa-item{:"data-filter" => "return misc"}
+      %h2 Как получить купон на скидку?
+      .qa-body
+        %p= lorem.paragraph

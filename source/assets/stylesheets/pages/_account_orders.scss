@@ -1,0 +1,147 @@
+.olist {
+  border: 0;
+}
+.olist-loader {
+  margin-top: 33px;
+  text-align: center;
+}
+.olist-table {
+  width: 100%;
+  font-size: 12px;
+  @include respond-to(mob) {
+    border-top: 1px solid #dbdbdb;
+  }
+}
+.olist-desc {
+  cursor: pointer;
+  // border-bottom: 1px solid #dbdbdb;
+  &:hover {
+    .olist-num {
+      opacity: .65;
+    }
+  }
+  > td {
+    padding: 20px 25px;
+  }
+  &.strip {
+    background: #f0f0f0;
+  }
+  &.is__cancelled {
+    background: #000;
+    color: #fff;
+    .olist-collapse {
+      @include tgs(plus_w, 12px);
+    }
+    &.is__active .olist-collapse {
+      @include tgs(minus_w, 12px);
+    }
+  }
+}
+.olist-collapse {
+  display: block;
+  @include tgs(plus, 12px);
+  .olist-desc.is__active & {
+    @include tgs(minus, 12px);
+  }
+}
+.olist-desc.strip + .olist-item {
+  border-width: 0 0 1px;
+}
+.olist-item {
+  display: none;
+  border: solid #dbdbdb;
+  border-width: 1px 0 0;
+  &.is__active {
+    display: table-row;
+  }
+  .order-table {
+    border-top: 0;
+    border-bottom: 0;
+    margin-bottom: 10px;
+    thead {
+      border-bottom: 0;
+    }
+    td {
+      padding: 10px;
+    }
+  }
+  .order-additional {
+    margin-bottom: 35px;
+    @include respond-to(mob) {
+      border-top: 1px solid #dbdbdb;
+      padding: 20px 38px 0;
+      .order-summary {
+        border-top: 0;
+        margin-top: 0;
+      }
+    }
+  }
+}
+.order-delivery {
+  float: left;
+  width: 40%;
+  @include respond-to(mob) {
+    width: auto;
+    float: none;
+  }
+  h2 {
+    font: 14px $fontAlt;
+  }
+}
+.order-delivery-type {
+  font-weight: bold;
+}
+
+@include respond-to(mob) {
+  .olist-desc {
+    display: block;
+    overflow: hidden;
+    padding: 18px 38px 16px;
+    > td {
+      // float: left;
+      display: block;
+      padding: 8px 0;
+    }
+  }
+  .olist-clps {
+    float: left;
+    margin-right: 6px;
+  }
+  .olist-num { float: left;}
+  .olist-date {
+    float: right;
+    width: 40%;
+    text-align: right;
+  }
+  .olist-kind {
+    float: left;
+    width: 33%;
+    clear: left;
+  }
+  .olist-status {
+    float: left;
+    width: 33%;
+    text-align: center;
+  }
+  .olist-price {
+    float: right;
+    width: 33%;
+    text-align: right;
+  }
+  .olist-item {
+    .order-item {
+      margin-left: 38px;
+      margin-right: 38px;
+      td {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+    .order-item-size {
+      margin: 3px 0;
+    }
+    .order-item-amount {
+      padding-right: 0 !important;
+    }
+  }
+}

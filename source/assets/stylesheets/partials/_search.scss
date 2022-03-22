@@ -1,0 +1,126 @@
+.searchbox {
+  position: fixed;
+  z-index: 1002;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 160px;
+  padding-bottom: 55px;
+  box-sizing: border-box;
+  height: 100%;
+  transform: translateY(-100%);
+  transition: transform .3s ;
+  &.is__active {
+    transform: translateY(0);
+  }
+  .holder {
+    margin: 0 40px;
+    @include respond-to(tablet) {
+      width: auto;
+    }
+  }
+}
+
+.searcher {
+  position: absolute;
+  top: 55px;
+  width: 100%;
+  padding: 35px 0 5px;
+  background: #f5f3f1;
+}
+.searcher-form {
+  position: relative;
+  .input {
+    width: 100%;
+    font-size: 24px;
+    padding-left: 12px;
+    padding-right: 45px;
+    padding-bottom: 13px;
+  }
+}
+.searcher-button {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  border: 0;
+  text-indent: -1000em;
+  @include tgs(magni, 14px);
+  .search_done & {
+    display: none;
+  }
+}
+.searcher-closer {
+  // display: none;
+  position: absolute;
+  top: 47px;
+  right: 16px;
+  @include tgs(cross, 10px);
+  // .search_done & {
+  //   display: block;
+  // }
+}
+.search-results {
+  padding: 30px 0;
+  background: #fff;
+  height: 100%;
+  .holder {
+    height: 100%;
+  }
+}
+.search-list {
+  overflow: auto;
+  max-height: 100%;
+  overflow: auto;
+  margin-right: -20px;
+  margin-left: -24px;
+  .sitem {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 24px;
+    width: 256px;
+    @include respond-to(mob) {
+      display: block;
+      width: auto;
+      margin-right: 20px;
+    }
+    // width: 212px;
+  }
+  .sitem_hidden {
+    @include respond-to(tablet) {
+      display: none;
+      .search-results.is__active & {
+        display: inline-block;
+      }
+    }
+  }
+}
+.sitem_alt {
+  background: #f5f3f1;
+}
+.sitem_noimage {
+  padding-left: 20px;
+  .item-info {
+    width: 100%;
+  }
+}
+.search-results-expander {
+  margin-top: 10px;
+  width: 220px;
+  box-sizing: border-box;
+  line-height: 1;
+  display: block;
+  padding: 24px;
+  border: 1px solid #000;
+  font: bold 17px $fontAlt;
+  text-transform: uppercase;
+  &:hover {
+    background: #f5f3f1;
+  }
+}
+
+.sitems-hidden {
+  display: none;
+  .search-results.is__active & {
+    display: inline;
+  }
+}

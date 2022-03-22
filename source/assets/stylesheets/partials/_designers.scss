@@ -1,0 +1,128 @@
+.designers-link {
+  position: fixed;
+  z-index: 1002;
+  top: 81px;
+  box-sizing: border-box;
+  padding: 0 14px 0 30px;
+  background: #fff;
+  text-transform: uppercase;
+  font: 14px/40px $fontAlt;
+  min-width: 140px;
+  transition: all .3s;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+    color: #666;
+  }
+  @include respond-to(mob) {
+    position: relative;
+    display: block;
+    top: 0;
+    text-align: center;
+  }
+  &.is__active {
+    z-index: 1001;
+    min-width: 170px;
+    background: #000;
+    color: #fff;
+    @include respond-to(mob) {
+      width: auto;
+    }
+    // &:after {
+    //   content: '';
+    //   position: absolute;
+    //   top: 14px;
+    //   right: 17px;
+    //   // @include sbgs(bclose);
+    // }
+  }
+}
+
+.designers-close {
+  opacity: 0;
+  position: absolute;
+  top: 14px;
+  right: 17px;
+  @include tgs(cross_w, 10px);
+  cursor: pointer;
+  transition: all .3s;
+  .designers-link.is__active & {
+    opacity: 1;
+  }
+}
+
+.designers {
+  position: fixed;
+  top: 55px;
+  bottom: 55px;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  padding: 215px 7px 6px 30px;
+  width: 170px;
+  background: #f5f3f1;
+  transform: translateX(-100%);
+  transition: transform .3s ;
+  &.is__active {
+    transform: translateY(0);
+  }
+  @include respond-to(mob) {
+    width: 100%;
+    padding-top: 150px;
+    bottom: 0;
+  }
+}
+.designers-filter {
+  position: absolute;
+  top: 0;
+  box-sizing: border-box;
+  margin-left: -30px;
+  padding: 82px 20px 0 30px;
+  height: 205px;
+  width: 100%;
+  background: #fff;
+  text-align: justify;
+  text-transform: uppercase;
+  font: 14px/20px $fontAlt;
+  word-spacing: 4px;
+  a {
+    &:hover {
+      opacity: .7;
+    }
+    &.is__active {
+      opacity: .5;
+    }
+  }
+  @include respond-to(mob) {
+    padding-top: 50px;
+    height: 140px;
+  }
+}
+.designers-filter-list {
+  margin-top: 3px;
+}
+.designers-list {
+  overflow: auto;
+  padding-right: 10px;
+  height: 100%;
+  list-style: none;
+  font-size: 11px;
+  li {
+    margin-bottom: 1em;
+  }
+  a {
+    color: #666;
+    &:hover {
+      color: #000;
+    }
+  }
+}
+.designers-list[data-filter] {
+  li {
+    display: none;
+  }
+}
+
+@each $letter in ('123', a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, x, y, z) {
+  .designers-list[data-filter="#{$letter}"] .des__#{$letter} { display: list-item; }
+}

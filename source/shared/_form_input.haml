@@ -1,0 +1,11 @@
+- placeholder ||= ""
+- value ||= ""
+- type ||= "text"
+- input_class ||= ""
+- is_required ||= false
+- prechoice ||= false
+- if prechoice
+  - input_class += " js__prechoice-" + prechoice
+%label.form-label{:for => "#{name}"}= title
+%input.form-input{:type => type, :name => name, :id => name, :placeholder => placeholder, :value => value, :class => input_class, :required => is_required}/
+.form-notifier обязательное для заполнения поле

@@ -1,0 +1,12 @@
+---
+menu_subscribe: "is__active"
+---
+%h1.on__mobile Подписка
+.box.subscribe
+  .pblock
+    %h2 Вы не подписаны на нашу рассылку
+    %form.form.form-account.cols.js__subscribe{:action => "#"}
+      .former
+        %label.form-label E-mail
+        %input.input.js__subscribe-input{:type => "text"}/
+        %button.button.button_alt.js__subscribe-button{:type => "sumbit"} подписаться

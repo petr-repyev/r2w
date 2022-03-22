@@ -1,0 +1,221 @@
+.account {
+  width: 770px;
+  margin: 0 auto;
+  // padding: 42px 36px;
+
+  @include respond-to(tablet) {
+    padding-top: 20px;
+    width: auto;
+  }
+  h2 {
+    font-size: 18px;
+    letter-spacing: .025em;
+  }
+  .block {
+    h2 {
+      font-size: 13px;
+      font-weight: bold;
+    }
+  }
+  .former {
+    margin-top: 20px;
+    .form-label {
+      margin-bottom: 0;
+    }
+    .input {
+      @include respond-to(mob) {
+        margin: 10px 0;
+        width: 100%;
+      }
+    }
+    .button {
+      @include respond-to(mob) {
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+.account-header {
+  // margin-bottom: 11px;
+  @include respond-to(mob) {
+    display: none;
+  }
+}
+.account-menu {
+  @include respond-to(tablet) {
+    padding: 0 30px;
+  }
+  @include respond-to(mob) {
+    position: fixed;
+    top: 0; right: 50px; bottom: 0; left: 0;
+    width: auto;
+    margin: 0;
+    z-index: 1001;
+    padding: 20px 16px 0;
+    background: #f5f3f1;
+    transform: translateX(-100%);
+    opacity: 0;
+    text-align: left;
+    transition: transform .3s;
+    &.is__active {
+      transform: translateX(0);
+      opacity: 1;
+      transition: transform .3s;
+    }
+    a {
+      display: block;
+    }
+  }
+}
+.account-menu-body {
+  // @include respond-to(tablet) {
+  //   text-align: justify;
+  //   &:after {
+  //     content: '';
+  //     display: inline-block;
+  //     width: 100%;
+  //   }
+  // }
+}
+// .account-menu {
+//   text-align: center;
+//   font: bold 14px $fontAlt;
+//   text-transform: uppercase;
+//   transform: translateX(0);
+//   opacity: 1;
+//   margin-bottom: 40px;
+//   @include respond-to(tablet) {
+//     margin-bottom: 18px;
+//   }
+//   @include respond-to(mob) {
+//     position: fixed;
+//     top: 0; right: 50px; bottom: 0; left: 0;
+//     width: auto;
+//     margin: 0;
+//     z-index: 1001;
+//     padding: 20px 16px 0;
+//     background: #f5f3f1;
+//     transform: translateX(-100%);
+//     opacity: 0;
+//     text-align: left;
+//     transition: transform .3s;
+//     &.is__active {
+//       transform: translateX(0);
+//       opacity: 1;
+//       transition: transform .3s;
+//     }
+//     a {
+//       display: block;
+//     }
+//   }
+//   a {
+//     margin: 0 12px;
+//     color: #636363;
+//     &.is__active {
+//       font-style: italic;
+//       color: #000;
+//     }
+//   }
+// }
+
+.button-box {
+  clear: both;
+  margin-top: 30px;
+  text-align: center;
+  .button {
+    width: 200px;
+  }
+}
+
+.form-account {
+  h2 {
+    margin-bottom: 50px;
+    font-size: 30px;
+    text-transform: none;
+    font-weight: normal;
+  }
+  .input {
+    width: 100%;
+    letter-spacing: .1em;
+    font: bold 14px $fontAlt;
+    text-transform: uppercase;
+    &:disabled {
+      border-bottom: 0;
+      color: #000;
+    }
+  }
+  .button {
+    margin-top: 5px;
+  }
+}
+
+
+.subscribe {
+  padding-top: 40px;
+  @include respond-to(mob) {
+    padding-top: 10px;
+  }
+  h2 {
+    margin-bottom: 40px;
+    font-size: 24px;
+    text-transform: none;
+  }
+  .former .button {
+    margin-top: -6px;
+    width: 220px;
+    @include respond-to(mob) {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  .former .input {
+    width: 293px;
+    margin-right: 58px;
+    margin-bottom: 0;
+    @include respond-to(mob) {
+      margin-bottom: 20px;
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}
+
+
+
+@include respond-to(mob) {
+  .account-menu {
+    position: fixed;
+    top: 0; right: 50px; bottom: 0; left: 0;
+    z-index: 1100;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    height: auto;
+    transform: translateX(-100%);
+    transition: transform .3s;
+    &.is__active {
+      transform: translate(0);
+    }
+  }
+  .account-menu-body {
+    padding: 20px;
+    background: #f5f3f1;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .account-menu-overlay {
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    background: rgba(0,0,0,.8);
+    opacity: 0;
+    transition: opacity .3s;
+    .account-menu.is__active & {
+      right: -1000em;
+      opacity: 1;
+    }
+  }
+}

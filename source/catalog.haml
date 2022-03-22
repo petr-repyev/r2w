@@ -1,0 +1,37 @@
+---
+page_class: "main_catalog"
+banner: true
+---
+.catalog.clear
+  = partial :filters
+
+  .cntnt
+    .cntnt-holder
+      %a.side-title.js__toggler-click.js__filter-click{:href => "#", :"data-toggle" => "#filters"} Фильтры
+      %h1
+        Платья
+        %sup (210)
+      .catalog-menu
+        %a.catalog-menu-item.is__active{:href => "#"} Все
+        %a.catalog-menu-item{:href => "#"} новые
+        %a.catalog-menu-item{:href => "#"} цена max-min
+        %a.catalog-menu-item{:href => "#"} цена min-max
+        %a.catalog-menu-item{:href => "#"} по цвету
+      .catalog-items
+        = partial :product, :locals => {:id => 1, :name => "La Room", :desc => "Черное платье с принтом", :price => "29.400 р.", :is_sold => true, :is_nologged => true}
+        = partial :product, :locals => {:id => 2, :name => "Dasha Gauzer", :desc => "Черное платье с принтом", :price => "11.600 р.", :label => "-30%"}
+        %a.item.item_promo{:href => "item-g.html"}
+          %span.item_promo-image
+            %img{:src => "#{images_dir}/data/itemb.jpg", :alt => ""}/
+          %span.item_promo-text
+            %strong подарочная карта
+            ready-to-wear
+        = partial :product, :locals => {:id => 3, :name => "Lena by Lena Vasilyeva", :desc => "Неоприновое платье с розой", :price => "18.900 р.", :label => "new"}
+        = partial :product, :locals => {:id => 4, :name => "LES'", :desc => "Платье с цветочным принтом", :price => "18.900 р.", :label => "act"}
+        = partial :product, :locals => {:id => 5, :name => "Ready-to-Wear", :desc => "Ассиметричное серое платье", :price => "12.500 р."}
+        %a.item.item_promo.item_big{:href => "#"}
+          %span.item_promo-image
+            %img{:src => "#{images_dir}/data/br.jpg", :alt => ""}/
+        = partial :product, :locals => {:id => 6, :name => "LES'", :desc => "Платье с цветочным принтом", :price => "13.300 р.", :price_old => "26.600 р."}
+        = partial :product, :locals => {:id => 7, :name => "White By Vera Wang", :desc => "Черное платье с принтом", :price => "65.400 р."}
+        = partial :product, :locals => {:id => 8, :name => "Helmut Lang", :desc => "Синее шелковое платье в горох", :price => "19.200 р."}

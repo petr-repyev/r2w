@@ -1,0 +1,31 @@
+---
+body_class: "is__alerted"
+alert: "Укажите свой размер для каждой вещи, чтобы мы «отложили» их для вас еще до заказа 123"
+menu_wishlist: "is__active"
+---
+
+%h1.on__mobile Wishlist
+.box.wishlist
+  .wishlist-sharing.pblock
+    %p.wishlist-sharing-info Делясь с друзьями своим вишлистом, вы получаете 500 бонусных баллов на свой счет. <br/>Подробности акции см. в разделе <a href="#">Условия использования</a>.
+    = partial :social
+  .wishlist-catalog
+    .pblock
+      = partial :product, :locals => {:id => 1, :name => "La Room", :desc => "Черное платье с принтом", :price => "29.400 р.", :is_sold => true, :is_wishlist => true}
+      = partial :product, :locals => {:id => 2, :name => "Dasha Gauzer", :desc => "Черное платье с принтом", :price => "11.600 р.", :is_avail => true, :is_wishlist => true}
+      = partial :product, :locals => {:id => 3, :name => "Lena by Lena Vasilyeva", :desc => "Неоприновое платье с розой", :price => "18.900 р.", :is_reserved => true, :is_wishlist => true}
+      = partial :product, :locals => {:id => 1, :name => "La Room", :desc => "Черное платье с принтом", :price => "29.400 р.", :is_sold => true, :is_wishlist => true}
+      = partial :product, :locals => {:id => 2, :name => "Dasha Gauzer", :desc => "Черное платье с принтом", :price => "11.600 р.", :is_wishlist => true}
+      = partial :product, :locals => {:id => 3, :name => "Lena by Lena Vasilyeva", :desc => "Неоприновое платье с розой", :price => "18.900 р.", :is_wishlist => true}
+    .wishlist-total
+      Товаров на сумму:
+      %strong 92 500 р.
+    .button-box
+      %a.button.button_alt.js__popup-link{:href => "#wishlistadded"} Добавить все в корзину
+  .additional
+    %h2.additional-header Вам также может понравиться
+    = partial :"blocks/slider"
+.popup.mfp-hide.ok#wishlistadded
+  %h2 Все товары добавлены
+  %footer.popup-footer
+    %a.button.js__popup-closer{:href => "#"} Окей

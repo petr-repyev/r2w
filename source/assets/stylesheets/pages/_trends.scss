@@ -1,0 +1,142 @@
+.trends {
+  width: auto;
+  @include respond-to(mob) {
+    padding: 0 40px;
+    h1 {
+      margin-left: 0;
+    }
+  }
+}
+.trend {
+  position: relative;
+  // min-height: 400px;
+  margin: 40px 0 80px;
+}
+.trend-images {
+  z-index: 1;
+  width: 730px;
+  height: 350px;
+  position: relative;
+  margin: auto;
+  @include respond-to(mob) {
+    width: auto;
+    height: auto;
+  }
+}
+.trend-img {
+  position: absolute;
+  width: 230px;
+  img {
+    max-width: 100%;
+  }
+}
+.trend-img_1 {
+  top: 0;
+  left: 250px;
+}
+.trend-img_2 {
+  right: 500px;
+  bottom: 220px;
+  text-align: right;
+  img {
+    max-height: 120px;
+  }
+}
+.trend-img_3 {
+  right: 500px;
+  top: 150px;
+  text-align: right;
+  img {
+    max-height: 180px;
+  }
+}
+.trend-img_4 {
+  left: 500px;
+  bottom: 160px;
+  img {
+    max-height: 180px;
+  }
+}
+.trend-img_5 {
+  left: 500px;
+  top: 210px;
+  img {
+    max-height: 130px;
+  }
+}
+
+.trend:nth-child(even) {
+  .trend-desc {
+    left: 10px;
+    right: auto;
+  }
+  .trend-img_2 {
+    right: auto;
+    left: 500px;
+    text-align: left;
+  }
+  .trend-img_3 {
+    right: auto;
+    left: 500px;
+    text-align: left;
+  }
+  .trend-img_4 {
+    left: auto;
+    right: 500px;
+    text-align: right;
+  }
+  .trend-img_5 {
+    left: auto;
+    right: 500px;
+    text-align: right;
+  }
+}
+
+.trend .trend-img {
+  @include respond-to(mob) {
+    position: static;
+    width: auto;
+    text-align: center;
+    margin-bottom: 20px;
+    img {
+      max-height: none;
+    }
+  }
+}
+.trend-desc {
+  position: absolute;
+  z-index: 2;
+  top: 35px;
+  width: 225px;
+  box-sizing: border-box;
+  padding: 25px 28px;
+  background: rgba(255,255,255,.9);
+  font-size: 12px;
+  line-height: 17px;
+  color: #7f7f7f;
+  right: 10px;
+  p {
+    margin-bottom: 0;
+  }
+  h2 {
+    margin-top: 0;
+    font-size: 21px;
+    line-height: 24px;
+    color: #000;
+    letter-spacing: .034em;
+  }
+
+  @include respond-to(mob) {
+    position: static;
+    text-align: center;
+    width: auto;
+    h2 {
+      font-size: 15px;
+      line-height: 22px;
+    }
+    p {
+      font-size: 12px;
+      line-height: 22px;
+    }
+  }
+}

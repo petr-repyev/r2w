@@ -1,0 +1,25 @@
+---
+page_class: "page_thanx"
+---
+= partial :"blocks/designers"
+.thanx{:style => "background-image: url(#{images_dir}/data/tnx.jpg);"}
+  .thanx-body
+    %h1 <strong>Иванов Владимир</strong>, благодарим за покупку!
+    .thanx-info
+      .thanx-num
+        Ваш заказ
+        %strong № 394456456
+      .thanx-details
+        Все детали были отправлены на ваш email:
+        %strong vladimir.kolesnikov@gmail.com
+    .thanx-share.clear
+      .thanx-share-txt Рассказать о покупке:
+      = partial :social
+
+    .thanx-order
+      %img.thanx-order-image{:src => "#{images_dir}/data/tno.jpg", :alt => ""}/
+      .thanx-order-body
+        %h2 Я только что купил блейзер <strong>Dior</strong> и еще 3 вещи на <a href="#"><strong>READY-TO-WEAR.RU</strong></a>.
+        %p The brand Alexis Mabille was founded in 2005. It pro- poses different items like trousers, shirts, jacket for men and women. The designer likes precious materials.
+    .thanx-share-info
+      Делясь с друзьями новостью о данной покупке, вы получите 500 <a href="#">бонусных баллов</a> на свой счет

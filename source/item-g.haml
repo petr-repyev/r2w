@@ -1,0 +1,151 @@
+---
+page_class: "main_item"
+---
+= partial :"blocks/designers"
+.item-page.item-page_card.clear.js__product.js__item
+  .holder
+    .item-photos.js__photo-container
+      .item-photo.js__photo.is__active{:style => "background-image: url(#{images_dir}/data/pg.jpg)"}
+        -# %img{:src => "#{images_dir}/data/pg.jpg", :alt => ""}/
+    .item-content
+      .item-bc
+        %a{:href => "catalog.html"} ‹ Женская одежда
+      %h1.item-name подарочная карта
+      .item-brand Лучший подарок!
+
+      .item-nom
+        %span.item-nom-title номинал:
+        %select.form-select{:name => "", :style => "width: 100px;"}
+          %option{:value => "0"} 5 000 Р.
+          %option{:value => "1"} 10 000 Р.
+          %option{:value => "2"} 15 000 Р.
+
+      .item-form
+        .form-row
+          = partial :form_input, :locals => {:title => "имя отправителя:", :name => "g_name"}
+        .form-row
+          = partial :form_input, :locals => {:title => "e-mail отправителя:", :name => "g_mail"}
+        .form-row
+          = partial :form_input, :locals => {:title => "имя получателя:", :name => "g_name2"}
+        .form-row
+          = partial :form_input, :locals => {:title => "e-mail получателя:", :name => "g_mail2"}
+
+      .item-buttons.js__item-buttons
+        .item-buy.js__item-buy
+          %a.button.item-buy-tocart{:href => "#"}
+            В корзину
+            %span.icon.icon_cart
+          %span.button.button_alt.item-buy-choose
+            Выберите размер
+        %a.button.button_alt.item-subscribe.js__item-subscribe{:href => "#"}
+          Подписаться
+          %span.icon.icon_mail
+        %a.item-fav.js__item-fav{:href => "#"}
+
+      .item-block.block.js__block.is__active
+        %h2.block-header
+          %a.js__block-clicker{:href => "#"} описание
+        .block-body
+          %p Состав: 55 % хлопок, 42% нейлон, 3% эластан <br/>Топ ярко-синего цвета с белым  контрастным принтом отличается свободным силуэтом цельнокроенного рукава длиной в три четверти.
+
+      .item-block.block.js__block
+        %h2.block-header
+          %a.js__block-clicker{:href => "#"} доставка
+        .block-body
+          доставка
+
+      .item-block.block.js__block
+        %h2.block-header
+          %a.js__block-clicker вопрос консультанту
+        .block-body
+          question
+
+      .item-block.block.js__block.is__active
+        %h2.block-header
+          %a.js__block-clicker share
+        .block-body
+          = partial :social
+
+.additional
+  .holder
+    %h2.additional-header похожие товары
+    = partial :"blocks/slider"
+
+.item-related.item-related_look
+  .holder
+    %h2 shop the look
+    = partial :"blocks/look"
+
+#sizechart.popup.mfp-hide
+  .sizechart.js__tabs
+    .sizechart-block
+      %h2 таблица размеров
+      .js__tabs-switcher
+        женские
+        мужские
+
+    %table.table.table_sizechart.table_stripped
+      %tbody
+        %tr
+          %td alpha
+          %td XXS
+          %td XS
+          %td S
+          %td M
+          %td L
+          %td XL
+          %td XXL
+        %tr
+          %td ru
+          %td 40
+          %td 42
+          %td 44
+          %td 46
+          %td 48
+          %td 50
+          %td 52
+        %tr
+          %td uk
+          %td 6
+          %td 8
+          %td 10
+          %td 12
+          %td 14
+          %td 16
+          %td 18
+        %tr
+          %td us
+          %td 0
+          %td 2
+          %td 4
+          %td 6
+          %td 8
+          %td 10
+          %td 12
+        %tr
+          %td fr
+          %td 34
+          %td 36
+          %td 38
+          %td 40
+          %td 42
+          %td 44
+          %td 46
+        %tr
+          %td sw
+          %td 34
+          %td 36
+          %td 38
+          %td 40
+          %td 42
+          %td 44
+          %td 46
+    .sizechart-block.block.pblock.js__block
+      %h2.block-header
+        %a.js__block-clicker{:href => "#"} подсказки по выбору размера
+      .sizechart-block-body.block-body
+        %p Для того, чтобы выбрать правильный размер верхней одежды, необходимо знать основные параметры своей фигуры. Для этого нужно сделать измерения груди, талии и бедер. Эти значения будут вам нужны всегда при выборе верхней одежды и любой другой одежды. Для того, чтобы правильно измерить себя, вам понадобится сантиметровая лента. Встаньте возле зеркала и следуйте рекомендациям.
+        .sizechart-helper
+          %p <strong>Для груди:</strong> оберните ленту вокруг себя так, чтобы она проходила через лопатки и самую выступающую часть груди; для талии: лента должна проходить по самой узкой части торса;
+          %p <strong>Для талии:</strong> лента должна проходить по самой узкой части торса;
+          %p <strong>Для бедер:</strong> лента должна проходить по самым выступающим частям ягодиц. Если верхняя одежда имеет четкие плечи, то обязательно измерьте ширину плеча: от точки соединения плеча и шеи до самой крайней точки плеча.

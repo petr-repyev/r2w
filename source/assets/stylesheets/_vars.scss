@@ -1,0 +1,109 @@
+@import url(http://fonts.googleapis.com/css?family=Cuprum:400,400italic,700,700italic&subset=latin,cyrillic);
+
+$fontMain: Arial, sans-serif;
+$fontAlt: 'Cuprum', 'Trebuchet MS', Arial, sans-serif;
+$mw: 45px;
+
+$duration: 0.5s;
+
+// Сборщик спрайта
+// @include tbgs($icon) — ставит изображение в бэкграунд и прописывает блоку его размеры
+// @include tgs($icon, $width) — ставит изображение в бэкграунд и ужимает его до указанной ширины
+// изображения берутся из директории /assets/images/icons, расширение указывать не нужно
+$icons: sprite-map("icons/*.png", $spacing: 10px);
+@mixin image-size($path){
+  width: image-width($path);
+  height: image-height($path);
+}
+@mixin sized-sprite($map, $sprite){
+  background: sprite($map, $sprite) no-repeat;
+  @include image-size(sprite-file($map, $sprite));
+}
+@mixin tbgs($icon) {
+  @include sized-sprite($icons, $icon);
+}
+@mixin tgs($icon, $width) {
+  $icon-file: sprite-file($icons, $icon);
+  $icon-width: image-width($icon-file);
+  $icon-height: image-height($icon-file);
+  $sprite-path: sprite-path($icons);
+  $sprite-width: image-width($sprite-path);
+  $sprite-height: image-height($sprite-path);
+  $space-top: nth(sprite-position($icons, $icon),2);
+  $ratio: $width/$icon-width;
+
+  width: $width;
+  height: floor($icon-height * $ratio);
+  background: sprite($icons, $icon);
+  background-size: floor($sprite-width * $ratio) floor($sprite-height * $ratio);
+  background-position: 0 ($space-top * $ratio);
+}
+
+// Миксин для адаптива
+// пишется внутри блока, для которого хотим задать адаптивное отображение
+// @include respond-to(tablet) { … } — адаптив для планшета
+// @include respond-to(mob) { … } — адапатив для мобильного
+// @include respond-to(desktop) { … } — адаптив для десктопа
+// @include respond-to(500px) { … } — адаптив для конкретного разрешения (здесь 500px)
+$break-1: 477px;
+$break-2: 767px;
+$break-3: 1024px;
+@mixin respond-to($media) {
+  @if $media == sm {
+    @media only screen and (max-width: $break-1) { @content; }
+  }
+  @if $media == mob {
+    @media only screen and (max-width: $break-2) { @content; }
+  }
+  @if $media == tablet {
+    @media only screen and (max-width: $break-3) { @content; }
+  }
+  @if $media == desktop {
+    @media only screen and (min-width: $break-3 + 1) { @content; }
+  }
+  @else {
+    @media only screen and (min-width: $media) { @content; }
+  }
+}
+
+// Миксин для стилизации плейсхолдера
+@mixin placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+// Миксин для анимации
+@mixin animation($prop: opacity, $t1: .3s, $t2: .1s) {
+  transition: $prop $t1;
+  &:hover {
+    transition-duration: $t2;
+  }
+}
+
+// Миксин для очистки потока
+@mixin clear {
+  &:before {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}
+.clear {
+  @include clear;
+}
+
+@mixin a {
+  a {
+    color: #000;
+    &:hover {
+      opacity: .6;
+    }
+  }
+}

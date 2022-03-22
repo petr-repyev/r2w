@@ -1,0 +1,113 @@
+.article-list {
+  @include respond-to(tablet) {
+    width: 670px;
+    margin: auto;
+  }
+  @include respond-to(mob) {
+    width: auto;
+  }
+}
+.article-item {
+  display: block;
+  width: 320px;
+  text-align: center;
+  font-size: 12px;
+  color: #535353;
+  margin-bottom: 45px;
+  padding: 0 25px;
+  box-sizing: border-box;
+  &:hover {
+    opacity: 1;
+    .article-title {
+      opacity: .6;
+    }
+  }
+  @include respond-to(mob) {
+    max-width: 100%;
+    position: static !important;
+    margin: 0 auto 40px;
+  }
+}
+.article-title {
+  display: block;
+  margin-bottom: .5em;
+  font: 26px/1.2 $fontAlt;
+  line-height: 1.2;
+  text-transform: none;
+  color: #000;
+}
+.article-date {
+  display: block;
+}
+.article-meta {
+  display: block;
+  font-size: 11px;
+  color: #636363;
+}
+.article-image {
+  display: block;
+  margin: 20px -25px;
+  img {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+  }
+}
+.article-new {
+  position: absolute;
+  margin-top: 4px;
+  margin-left: 3px;
+  font: italic 12px $fontMain;
+}
+.article-desc {
+
+}
+
+.article-item_featured {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: left;
+  @include respond-to(mob) {
+    position: relative !important;
+  }
+  &:hover {
+    .article-title {
+      opacity: 1;
+      color: #ccc;
+    }
+  }
+  .article-title {
+    margin-top: .83em;
+    letter-spacing: .15em;
+    position: absolute;
+    left: 26px;
+    font: 43px/1.2 $fontAlt;
+    text-transform: uppercase;
+    color: #fff;
+    @include respond-to(mob) {
+      font-size: 25px;
+      letter-spacing: .038em;
+    }
+    span {
+      background: rgba(0,0,0,.6);
+    }
+  }
+  img {
+    width: 100%;
+  }
+  .article-meta {
+    position: absolute;
+    bottom: 36px;
+    left: 26px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 28px;
+    background: rgba(0,0,0,.6);
+    padding: 0 8px;
+    white-space: nowrap;
+    @include respond-to(mob) {
+      font-size: 16px;
+    }
+  }
+}

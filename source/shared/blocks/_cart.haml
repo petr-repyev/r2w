@@ -1,0 +1,63 @@
+.js__tbox.js__noscroll.cartbox.nervous#cart
+  .cart-items.scroll
+    .cart-item
+      %a.sitem{:href => "item.html"}
+        %span.item-image
+          %img{:src => "#{images_dir}/data/c1.jpg", :alt => ""}/
+        %span.item-info
+          %span.item-name  La Room
+          %span.item-desc Черное платье с принтом
+          %span.item-price
+            %span.item-amout 1x
+            6.200 р.
+      %a.cart-item-remove{:href => "#"}
+    .cart-item
+      %a.sitem{:href => "item.html"}
+        %span.item-image
+          %img{:src => "#{images_dir}/data/c2.jpg", :alt => ""}/
+        %span.item-info
+          %span.item-name  VANUSHINA
+          %span.item-desc Плаьте с рукавом и карманами
+          %span.item-price
+            %span.item-amout 1x
+            7.400 р.
+      %a.cart-item-remove{:href => "#"}
+    .cart-item
+      %a.sitem{:href => "item.html"}
+        %span.item-image
+          %img{:src => "#{images_dir}/data/c3.jpg", :alt => ""}/
+        %span.item-info
+          %span.item-name  VERA WANG
+          %span.item-desc Шерстяной кардиган
+          %span.item-price
+            %span.item-amout 1x
+            15 243 р.
+      %a.cart-item-remove{:href => "#"}
+    .cart-item
+      %a.sitem{:href => "item.html"}
+        %span.item-image
+          %img{:src => "#{images_dir}/data/c4.jpg", :alt => ""}/
+        %span.item-info
+          %span.item-name  acne
+          %span.item-desc Черные лоферы с серым отливом
+          %span.item-price
+            %span.item-amout 1x
+            13.000 р.
+        %span.item-remove
+      %a.sitem{:href => "item.html"}
+        %span.item-image
+          %img{:src => "#{images_dir}/data/c5.jpg", :alt => ""}/
+        %span.item-info
+          %span.item-name  die_blonde
+          %span.item-desc Красный браслет с камнями
+          %span.item-price
+            %span.item-amout 1x
+            13.000 руб.
+      %a.cart-item-remove{:href => "#"}
+  .cart-footer
+    .cart-subtotal
+      subtotal:
+      .cart-subtotal-sum 51.<sup>700 Р.</sup>
+    .cart-actions
+      %a.button{:href => "checkout.html"} Оформить заказ
+      %a.button.button_alt{:href => "cart.html"} Перейти в корзину

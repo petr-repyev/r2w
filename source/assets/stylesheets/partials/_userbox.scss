@@ -1,0 +1,134 @@
+.userbox {
+  position: fixed;
+  z-index: 1001;
+  top: 55px;
+  right: 0;
+  box-sizing: border-box;
+  width: 265px;
+  padding: 37px 20px 30px;
+  background: #fff;
+  transform: translateY(-120%);
+  transition: transform .3s ;
+  &.is__active {
+    transform: translateY(0);
+  }
+  h2 {
+    margin: 0 0 16px;
+    text-align: center;
+    letter-spacing: .1em;
+  }
+  .button {
+    height: 35px;
+    line-height: 38px;
+  }
+  &#user {
+    background: #f5f3f1;
+    width: 210px;
+    font-size: 11px;
+    color: #636363;
+    h2 {
+      text-align: left;
+      text-transform: none;
+      font-size: 16px;
+    }
+    a {
+      display: inline-block;
+      padding-bottom: 9px;
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+}
+.userbox-form {
+  background: #F5F3F1;
+  margin: 0 -20px;
+  padding: 35px 20px 30px;
+  .input {
+    height: 26px;
+    padding: 0 8px 8px;
+  }
+  .button,
+  .input {
+    width: 100%;
+  }
+}
+.userbox-forgot {
+  margin: -14px 0 18px;
+  font-size: 11px;
+  text-align: center;
+  color: #666;
+  &:hover {
+    color: #000;
+  }
+}
+.userbox-or {
+  margin: -10px 0 26px;
+  text-align: center;
+  font: italic 15px $fontAlt;
+  letter-spacing: .02em;
+}
+
+.userbox-social-button {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  height: 38px;
+  font: 14px/39px $fontAlt;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid;
+  &:after {
+    position: relative;
+    top: 1px;
+    content: '';
+    display: inline-block;
+    margin-left: 10px;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:hover,
+  &:active {
+    color: #fff;
+  }
+}
+.userbox-social-button_fb {
+  border-color: #4D6FB1;
+  color: #4D6490;
+  &:after {
+    // @include sbgs(b_fb);
+  }
+  &:hover {
+    background-color: #4D6FB1;
+    // &:after { @include bgs(b_fb_a); }
+  }
+  &:active {
+    background-color: #34517F;
+    // &:after { @include bgs(b_fb_a); }
+  }
+}
+.userbox-social-button_vk {
+  border-color: #537494;
+  color: #44678d;
+  &:after {
+    // @include sbgs(b_vk);
+  }
+  &:hover {
+    background-color: #537494;
+    // &:after { @include bgs(b_vk_a); }
+  }
+  &:active {
+    background-color: #354D62;
+    // &:after { @include bgs(b_vk_a); }
+  }
+}
+
+#forgot {
+  .userbox {
+    padding-bottom: 0;
+  }
+  .userbox-success {
+    display: none;
+  }
+}

@@ -1,0 +1,43 @@
+= partial :"blocks/logomenu"
+= partial :"blocks/menuboxes"
+= partial :"blocks/mmenu"
+= partial :"blocks/userboxes"
+= partial :"blocks/search"
+= partial :"blocks/cart"
+= partial :"blocks/magazine"
+= partial :"blocks/feedback"
+.overlay
+
+
+.popup.notifier.notifier_ok.mfp-hide#subscribed
+  %h2 Вы подписаны
+  %footer.popup-footer
+    %a.button.js__popup-closer{:href => "#"} Окей
+.popup.notifier.notifier_error.mfp-hide#notsubscribed
+  %h2 Ошибка
+  %p E-mail адрес заполнен некорректно, попробуйте еще раз
+  %footer.popup-footer
+    %a.button.js__popup-closer{:href => "#"} Окей
+
+.popup.notifier.notifier_ok.mfp-hide#unsubscribed
+  %h2 Вы отписаны от рассылки
+  %footer.popup-footer
+    %a.button.js__popup-closer{:href => "#"} Окей
+
+.popup.mfp-hide#item_subscribe
+  .feedback
+    %h2 Подписка на товар
+    %p Пожалуйста, введите ваш e-mail и как только товар снова появитсся в продаже мы сразу сообщим Вам об этом.
+    .feedback-form.js__subscribe
+      .form-row
+        %input.form-input.js__subscribe-input{:type => "text", :name => "sbs", :id => "sbs"}/
+        .form-notifier обязательное для заполнения поле
+      .form-row.form-row_btn
+        %a.button.js__subscribe-button.js__popup-closer{:href => "#"} Подписаться
+
+.popup.notifier.notifier_ok.mfp-hide#wishno
+  %h2 Вы не авторизованы
+  %p Для добавления товара в wishlist <a href="#" class="biglink">авторизуйтесь</a> на сайте.
+  %p Если у вас еще нет аккаунта вы можете <a href="#" class="biglink">зарегистрироваться</a> на сайте,  это не займет много времени
+  %footer.popup-footer
+    %a.button.js__popup-closer{:href => "#"} Окей

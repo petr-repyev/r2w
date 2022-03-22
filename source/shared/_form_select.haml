@@ -1,0 +1,14 @@
+- width ||= "100%"
+- title ||= false
+- aclass ||= ""
+- prechoice ||= false
+- placeholder ||= false
+- if prechoice
+  - aclass += " js__prechoice-" + prechoice
+- if (title)
+  %label.form-label{:for => name}= title
+%select.form-select{:name => name, :id => name, :"data-width" => "#{width}", :class => aclass, :"data-placeholder" => placeholder}
+  - if placeholder
+    %option{:value => 0}
+  - data.each_with_index do |item, index|
+    %option{:value => index}= item

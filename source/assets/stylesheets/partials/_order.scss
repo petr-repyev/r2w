@@ -1,0 +1,257 @@
+.order-table {
+  position: relative;
+  width: 100%;
+  font-size: 13px;
+  line-height: 17px;
+  margin-bottom: 40px;
+  @include respond-to(mob) {
+    border-top: 1px solid #dbdbdb;
+    margin-bottom: 30px;
+  }
+  tr {
+    // border-bottom: 0;
+  }
+  thead {
+    @include respond-to(mob) {
+      display: none;
+    }
+  }
+  th {
+    text-align: left;
+    font-size: 11px;
+    font-style: italic;
+    font-weight: normal;
+    color: #909090;
+    padding: 15px 10px;
+  }
+  td {
+    padding: 10px;
+    @include respond-to(mob) {
+      display: block;
+      padding: 0;
+    }
+    h2 {
+      font: bold 1em $fontMain;
+      letter-spacing: 0;
+      text-transform: none;
+      margin: 0 0 3px;
+    }
+  }
+
+}
+.order-desc {
+  margin: 0;
+  font-size: 11px;
+  font-style: italic;
+  color: #909090;
+}
+.order-item {
+  &:first-child td {
+    padding-top: 30px;
+    @include respond-to(mob) {
+      padding-top: 0;
+    }
+  }
+  &:last-child td {
+    padding-bottom: 30px;
+    @include respond-to(mob) {
+      padding-bottom: 0;
+    }
+  }
+  @include respond-to(mob) {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    padding: 25px 0;
+    @include clear;
+    padding-left: 85px;
+    border-bottom: 1px solid #dbdbdb;
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+.order-input_amount {
+  width: 50px;
+}
+.order-image {
+  text-align: center;
+  padding-left: 0 !important;
+  img {
+    max-height: 95px;
+  }
+}
+.order-item-remove {
+  display: inline-block;
+  @include tgs(cross, 10px);
+  &:hover {
+    opacity: .65;
+  }
+}
+.order-col_img { width: 106px; }
+.order-col_name { width: 215px; }
+.order-col_size { width: 140px;}
+.order-col_amount {
+  width: 90px;
+  @include respond-to(tablet) {
+    width: 90px;
+  }
+}
+.order-col-price { width: 120px; }
+.order-col-sum { width: 80px; }
+
+.order-additional {
+
+}
+.order-discounts {
+  float: left;
+  @include respond-to(mob) {
+    float: none;
+  }
+  .former {
+    @include respond-to(tablet) {
+      .button {
+        display: block;
+        margin-left: 0;
+        margin-top: 13px;
+      }
+    }
+  }
+}
+.order-summary {
+  width: 250px;
+  float: right;
+  @include respond-to(mob) {
+    width: auto;
+    float: none;
+    border-top: 1px solid #dbdbdb;
+    padding-top: 25px;
+    margin-top: 30px;
+  }
+  p {
+    margin: 0;
+    white-space: nowrap;
+  }
+}
+.order-summary-total {
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+  padding-top: .5em;
+}
+.order-summary-label {
+  display: inline-block;
+  width: 165px;
+  white-space: nowrap;
+}
+.order-checkout {
+  width: 100%;
+  margin: 40px 0 20px;
+  @include respond-to(mob) {
+    margin: 13px 0;
+  }
+}
+.order-check {
+  width: 100%;
+  color: #636363;
+  font-size: 12px;
+  line-height: 19px;
+  td {
+    &:last-child {
+      width: 60px;
+      white-space: nowrap;
+    }
+  }
+  tr {
+    &:last-child {
+      font-size: 14px;
+      color: #000;
+      td {
+        padding-top: 14px;
+        &:last-child {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+.order-item-price,
+.order-item-sum {
+  white-space: nowrap;
+}
+@include respond-to(mob) {
+  .order-item-image {
+    float: left;
+    margin-left: -85px;
+    width: 65px;
+    img {
+      max-width: 100%;
+    }
+    // margin-right: 20px;
+  }
+  .order-item-info {
+    font-size: 12px;
+  }
+  .order-item-size {
+    margin: 10px 0;
+    font-size: 11px;
+    color: #000;
+    font-style: italic;
+    span {
+      display: inline-block;
+    }
+    .chosen-single {
+      height: 22px;
+      line-height: 22px;
+    }
+    .chosen-container {
+      margin-left: 6px;
+      font-size: 10px;
+      font-style: normal;
+    }
+  }
+  .order-item-amount {
+    float: left;
+    .form-input {
+      border: 0;
+      line-height: 17px;
+      height: 17px;
+      padding: 0;
+      font-size: 11px;
+      color: #000;
+      width: 1em;
+      vertical-align: bottom;
+    }
+    @include respond-to(mob) {
+      .chosen-single {
+        height: 22px;
+        line-height: 22px;
+      }
+      .chosen-container {
+        margin-right: 6px;
+        font-size: 10px;
+        font-style: normal;
+      }
+    }
+  }
+  .order-item-price {
+    font-size: 11px;
+    line-height: 17px;
+    font-weight: bold;
+    &:before {
+      content: 'x ';
+      font-weight: normal;
+    }
+    @include respond-to(mob) {
+      line-height: 24px;
+    }
+  }
+  .order-item-sum {
+    display: none !important;
+  }
+  .order-item-remove {
+    position: absolute;
+    top: 25px;
+    right: 0;
+  }
+}
